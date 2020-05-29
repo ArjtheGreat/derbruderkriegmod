@@ -1,0 +1,2095 @@
+focus_tree = {
+	id = austrian_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = AUS
+		}
+	}
+
+  focus = {
+    id = AUS_BUILD_INDUSTRY
+    icon = GFX_focus_industry
+    text = AUS_BOOST_ECONOMY
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 0
+    y = 0
+    #relative_position_id = ITA_industrial_effort_2
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 2
+        category = industry
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_HEART_DEV_SCHEME
+    icon = GFX_focus_industry
+    text = HEART_DEV_SCHEME
+    prerequisite = { focus = AUS_BUILD_INDUSTRY }
+    mutually_exclusive = {focus = AUS_IMPERIAL_DEV_SCHEME}
+    x = -4
+    y = 1
+    relative_position_id = AUS_BUILD_INDUSTRY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      4 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+      152 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+
+      }
+  }
+
+  focus = {
+    id = AUS_IMPERIAL_DEV_SCHEME
+    icon = GFX_focus_industry
+    text = IMPERIAL_DEV_SCHEME
+    prerequisite = { focus = AUS_BUILD_INDUSTRY }
+    mutually_exclusive = {focus = AUS_HEART_DEV_SCHEME}
+    x = 4
+    y = 1
+    relative_position_id = AUS_BUILD_INDUSTRY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      75 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+
+                }
+              add_extra_state_shared_building_slots = 1
+          }
+      84 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+      102 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+     }
+  }
+
+
+  focus = {
+    id = AUS_KRUPP_FACTORIES
+    icon = GFX_focus_industry
+    text = AUS_KRUPP_FACTORIES
+    prerequisite = { focus = AUS_HEART_DEV_SCHEME }
+    x = -2
+    y = 1
+    relative_position_id = AUS_HEART_DEV_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      153 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+      }
+      39 = {
+
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+     }
+  }
+
+  focus = {
+    id = AUS_VIENNA_CIV_FACTORIES
+    icon = GFX_focus_industry
+    text = VIENNA_CIV_FACTORIES
+    prerequisite = { focus = AUS_HEART_DEV_SCHEME }
+    x = 2
+    y = 1
+    relative_position_id = AUS_HEART_DEV_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      4 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+     }
+  }
+
+  focus = {
+    id = AUS_ARBEISBRIGADE
+    icon = GFX_focus_industry
+    text = ARBEISBRIGADE
+    prerequisite = { focus = AUS_VIENNA_CIV_FACTORIES }
+    x = 0
+    y = 1
+    relative_position_id = AUS_VIENNA_CIV_FACTORIES
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Arbeitsbrigaden
+      }
+     }
+  }
+
+  focus = {
+    id = AUS_SALZBURG_ORDER
+    icon = GFX_focus_industry
+    text = AUS_SALZBURG_ORDER
+    prerequisite = { focus = AUS_KRUPP_FACTORIES }
+    x = 0
+    y = 1
+    relative_position_id = AUS_KRUPP_FACTORIES
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      152 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+      }
+    }
+
+
+  focus = {
+    id = AUS_MODERNIZATION
+    icon = GFX_focus_industry
+    text = AUS_MODERNIZATION
+    prerequisite = { focus = AUS_ARBEISBRIGADE }
+    prerequisite = { focus = AUS_SALZBURG_ORDER }
+    x = -2
+    y = 1
+    relative_position_id = AUS_ARBEISBRIGADE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_research_slot = 1
+     }
+  }
+
+  focus = {
+    id = AUS_DEV_PRAGUE
+    icon = GFX_focus_industry
+    text = AUS_DEV_PRAGUE
+    prerequisite = { focus = AUS_IMPERIAL_DEV_SCHEME }
+    x = -2
+    y = 1
+    relative_position_id = AUS_IMPERIAL_DEV_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      9 = {
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+
+     }
+  }
+
+  focus = {
+    id = AUS_DEV_BUDAPEST
+    icon = GFX_focus_industry
+    text = AUS_DEV_BUDAPEST
+    prerequisite = { focus = AUS_IMPERIAL_DEV_SCHEME }
+    x = 2
+    y = 1
+    relative_position_id = AUS_IMPERIAL_DEV_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      43 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+
+     }
+  }
+
+  focus = {
+    id = AUS_TRANSYLVANIA_ECON_UNION
+    icon = GFX_focus_industry
+    text = TRANSYLVANIA_ECON_UNION
+    prerequisite = { focus = AUS_DEV_BUDAPEST }
+    x = 0
+    y = 1
+    relative_position_id = AUS_DEV_BUDAPEST
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      84 = {
+        add_state_modifier = {
+          modifier = {
+            production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.25
+          }
+        }
+      }
+      76 = {
+        add_state_modifier = {
+          modifier = {
+            production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.25
+          }
+        }
+      }
+     }
+  }
+
+  focus = {
+    id = AUS_MORAVIA_ECON_UNION
+    icon = GFX_focus_industry
+    text = AUS_SALZBURG_ORDER
+    prerequisite = { focus = AUS_DEV_PRAGUE }
+    x = 0
+    y = 1
+    relative_position_id = AUS_DEV_PRAGUE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      75 = {
+        add_state_modifier = {
+          modifier = {
+            production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.25
+          }
+        }
+      }
+      9 = {
+        add_state_modifier = {
+          modifier = {
+            production_speed_buildings_factor = 0.2
+            industrial_capacity_factory = 0.25
+          }
+        }
+      }
+     }
+  }
+
+  focus = {
+    id = AUS_IMPERIAL_MODERNIZATION
+    icon = GFX_focus_industry
+    text = AUS_IMPERIAL_MODERNIZATION
+    prerequisite = { focus = AUS_MORAVIA_ECON_UNION }
+    prerequisite = { focus = AUS_TRANSYLVANIA_ECON_UNION }
+    x = 2
+    y = 1
+    relative_position_id = AUS_MORAVIA_ECON_UNION
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_research_slot = 1
+     }
+  }
+
+  focus = {
+    id = GROSS_KAISERWERKE
+    icon = GFX_focus_industry
+    text = GROSS_KAISERWERKE
+    prerequisite = { focus = AUS_MODERNIZATION focus = AUS_IMPERIAL_MODERNIZATION }
+    x = 4
+    y = 1
+    relative_position_id = AUS_MODERNIZATION
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Booming_Economy
+      }
+
+     }
+  }
+
+
+
+
+
+
+  ####ARMY
+
+  focus = {
+    id = AUS_KAISERLICHE_HEER
+    icon = GFX_focus_industry
+    text = AUS_KAISERLICHE_HEER
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 28
+    y = 0
+    relative_position_id = AUS_KAISER_ADDRESS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      army_experience = 20
+    }
+  }
+
+  focus = {
+    id = AUS_AUSTRIAN_COMMAND
+    icon = GFX_focus_industry
+    text = AUSTRIAN_COMMAND
+    prerequisite = { focus = AUS_KAISERLICHE_HEER }
+    mutually_exclusive = {focus = AUS_IMPERIAL_MIL}
+    x = -4
+    y = 1
+    relative_position_id = AUS_KAISERLICHE_HEER
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+          add_ideas = {
+            Austrian_Officers
+          }
+    }
+  }
+
+  focus = {
+    id = AUS_IMPERIAL_MIL
+    icon = GFX_focus_industry
+    text = AUS_IMPERIAL_MIL
+    prerequisite = { focus = AUS_KAISERLICHE_HEER }
+    mutually_exclusive = {focus = AUS_AUSTRIAN_COMMAND}
+    x = 4
+    y = 1
+    relative_position_id = AUS_KAISERLICHE_HEER
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Imperial_Military
+     }
+  }
+}
+
+  focus = {
+    id = AUS_FOCUS_ON_FIREPOWER
+    icon = GFX_focus_industry
+    text = FOCUS_ON_FIREPOWER
+    prerequisite = { focus = AUS_AUSTRIAN_COMMAND }
+    mutually_exclusive = { focus = AUS_FOCUS_ON_BATTLEPLAN }
+
+    x = -2
+    y = 1
+    relative_position_id = AUS_AUSTRIAN_COMMAND
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_superior_firepower
+        }
+    }
+  }
+
+  focus = {
+    id = AUS_FOCUS_ON_BATTLEPLAN
+    icon = GFX_focus_industry
+    text = AUS_FOCUS_ON_BATTLEPLAN
+    prerequisite = { focus = AUS_AUSTRIAN_COMMAND }
+    mutually_exclusive = { focus = AUS_FOCUS_ON_FIREPOWER }
+    x = 2
+    y = 1
+    relative_position_id = AUS_AUSTRIAN_COMMAND
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_grand_battle_plan
+      }
+     }
+  }
+
+  focus = {
+    id = AUS_VIENNA_KRIEGSAKADEMIE
+    icon = GFX_focus_industry
+    text = VIENNA_KRIEGSAKADEMIE
+    prerequisite = { focus = AUS_FOCUS_ON_BATTLEPLAN }
+    x = 0
+    y = 1
+    relative_position_id = AUS_FOCUS_ON_BATTLEPLAN
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = cat_grand_battle_plan
+      }
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = support_tech
+      }
+     }
+  }
+
+  focus = {
+    id = AUS_KRUPP_MAUSER_CONTRACTS
+    icon = GFX_focus_industry
+    text = AUS_KRUPP_MAUSER_CONTRACTS
+    prerequisite = { focus = AUS_FOCUS_ON_FIREPOWER }
+    x = 0
+    y = 1
+    relative_position_id = AUS_FOCUS_ON_FIREPOWER
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = artillery
+      }
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = infantry_weapons
+      }
+      }
+    }
+
+  focus = {
+    id = AUS_MASTER_ARTILLERY
+    icon = GFX_focus_industry
+    text = AUS_MASTER_ARTILLERY
+    prerequisite = { focus = AUS_KRUPP_MAUSER_CONTRACTS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_KRUPP_MAUSER_CONTRACTS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Hellsfire
+      }
+     }
+  }
+
+  focus = {
+    id = AUS_MASTER_TACTICS
+    icon = GFX_focus_industry
+    text = AUS_MASTER_TACTICS
+    prerequisite = { focus = AUS_VIENNA_KRIEGSAKADEMIE }
+    x = 0
+    y = 1
+    relative_position_id = AUS_VIENNA_KRIEGSAKADEMIE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_ideas = {
+          Tactical_Genius
+        }
+      }
+    }
+
+    focus = {
+      id = AUS_FOCUS_ON_SPEED
+      icon = GFX_focus_industry
+      text = FOCUS_ON_SPEED
+      prerequisite = { focus = AUS_IMPERIAL_MIL }
+      mutually_exclusive = { focus = AUS_FOCUS_ON_SIZE }
+
+      x = -2
+      y = 1
+      relative_position_id = AUS_IMPERIAL_MIL
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_mobile_warfare
+        }
+     }
+    }
+    focus = {
+      id = AUS_FOCUS_ON_SIZE
+      icon = GFX_focus_industry
+      text = AUS_FOCUS_ON_SIZE
+      prerequisite = { focus = AUS_IMPERIAL_MIL }
+      mutually_exclusive = { focus = AUS_FOCUS_ON_SPEED }
+      x = 2
+      y = 1
+      relative_position_id = AUS_IMPERIAL_MIL
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_mass_assault
+        }
+       }
+    }
+
+    focus = {
+      id = AUS_CONSCRIPT_THE_MASSES
+      icon = GFX_focus_industry
+      text = AUS_CONSCRIPT_THE_MASSES
+      prerequisite = { focus = AUS_FOCUS_ON_SIZE }
+      x = 0
+      y = 1
+      relative_position_id = AUS_FOCUS_ON_SIZE
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_ideas = {
+          extensive_conscription
+        }
+       }
+    }
+
+    focus = {
+      id = AUS_PANZER_CORP
+      icon = GFX_focus_industry
+      text = AUS_PANZER_CORP
+      prerequisite = { focus = AUS_FOCUS_ON_SPEED }
+      x = 0
+      y = 1
+      relative_position_id = AUS_FOCUS_ON_SPEED
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_light_armor
+        }
+        }
+      }
+
+    focus = {
+      id = AUS_MASTER_BLITZKRIEG
+      icon = GFX_focus_industry
+      text = AUS_MASTER_BLITZKRIEG
+      prerequisite = { focus = AUS_PANZER_CORP }
+      x = 0
+      y = 1
+      relative_position_id = AUS_PANZER_CORP
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_ideas = {
+          Lightning_War
+        }
+       }
+    }
+
+    focus = {
+      id = AUS_BRAVE_NEW_EMPIRE
+      icon = GFX_focus_industry
+      text = AUS_BRAVE_NEW_EMPIRE
+      prerequisite = { focus = AUS_CONSCRIPT_THE_MASSES }
+      x = 0
+      y = 1
+      relative_position_id = AUS_CONSCRIPT_THE_MASSES
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+          add_ideas = {
+            Brave_New_Empire
+          }
+        }
+      }
+
+  focus = {
+    id = AUS_REVITALIZE_ARMY
+    icon = GFX_focus_industry
+    text = AUS_REVITALIZE_ARMY
+    prerequisite = { focus = AUS_MASTER_ARTILLERY focus = AUS_MASTER_TACTICS focus = AUS_MASTER_BLITZKRIEG focus = AUS_BRAVE_NEW_EMPIRE }
+    x = 6
+    y = 1
+    relative_position_id = AUS_MASTER_ARTILLERY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Army_Future
+      }
+      army_experience = 50
+
+     }
+  }
+
+
+
+  #############Navy
+  focus = {
+    id = AUS_KAISER_MARINE
+    icon = GFX_focus_industry
+    text = AUS_KAISER_MARINE
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = AUS_KAISERLICHE_HEER
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = AUS_BUILD_DOCKYARDS
+    icon = GFX_focus_industry
+    text = AUS_BUILD_DOCKYARDS
+    prerequisite = { focus = AUS_KAISER_MARINE }
+    x = 0
+    y = 1
+    relative_position_id = AUS_KAISER_MARINE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      103 = {
+        add_building_construction = {
+            type = dockyard
+            level = 2
+            instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_TRUE_NAVY
+    icon = GFX_focus_industry
+    text = AUS_TRUE_NAVY
+    prerequisite = { focus = AUS_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = AUS_WOLF_PACKS }
+    mutually_exclusive = { focus = AUS_NAVAL_AVIATION }
+    x = -6
+    y = 1
+    relative_position_id = AUS_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_fleet_in_being
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_CAPITAL_SHIPS
+    icon = GFX_focus_industry
+    text = AUS_CAPITAL_SHIPS
+    prerequisite = { focus = AUS_TRUE_NAVY }
+    x = -2
+    y = 1
+    relative_position_id = AUS_TRUE_NAVY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = bb_tech
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_PROJECT_Z
+    icon = GFX_focus_industry
+    text = AUS_PROJECT_Z
+    prerequisite = { focus = AUS_TRUE_NAVY }
+    x = 2
+    y = 1
+    relative_position_id = AUS_TRUE_NAVY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = ca_tech
+      }
+    }
+  }
+
+
+
+  focus = {
+    id = AUS_WOLF_PACKS
+    icon = GFX_focus_industry
+    text = AUS_WOLF_PACKS
+    prerequisite = { focus = AUS_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = AUS_TRUE_NAVY }
+    mutually_exclusive = { focus = AUS_NAVAL_AVIATION }
+    x = 0
+    y = 1
+    relative_position_id = AUS_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_trade_interdiction
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_U_BOATS
+    icon = GFX_focus_industry
+    text = AUS_U_BOATS
+    prerequisite = { focus = AUS_WOLF_PACKS }
+    x = -2
+    y = 1
+    relative_position_id = AUS_WOLF_PACKS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = ss_tech
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_TRADE_WAR
+    icon = GFX_focus_industry
+    text = AUS_TRADE_WAR
+    prerequisite = { focus = AUS_WOLF_PACKS }
+    x = 2
+    y = 1
+    relative_position_id = AUS_WOLF_PACKS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = dd_tech
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_NAVAL_AVIATION
+    icon = GFX_focus_industry
+    text = AUS_NAVAL_AVIATION
+    prerequisite = { focus = AUS_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = AUS_WOLF_PACKS }
+    mutually_exclusive = { focus = AUS_TRUE_NAVY }
+    x = 6
+    y = 1
+    relative_position_id = AUS_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_base_strike
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_NAVY_FUTURE
+    icon = GFX_focus_industry
+    text = AUS_NAVY_FUTURE
+    prerequisite = { focus = AUS_NAVAL_AVIATION }
+    x = -2
+    y = 1
+    relative_position_id = AUS_NAVAL_AVIATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = naval_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_DEATH_FROM_ABOVE
+    icon = GFX_focus_industry
+    text = AUS_DEATH_FROM_ABOVE
+    prerequisite = { focus = AUS_NAVAL_AVIATION }
+    x = 2
+    y = 1
+    relative_position_id = AUS_NAVAL_AVIATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = cv_tech
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_AMPHIBIOUS_ASSAULT
+    icon = GFX_focus_industry
+    text = AUS_AMPHIBIOUS_ASSAULT
+    prerequisite = { focus = AUS_PROJECT_Z }
+    prerequisite = { focus = AUS_CAPITAL_SHIPS }
+    x = -2
+    y = 1
+    relative_position_id = AUS_PROJECT_Z
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = AUS_TRADE_DOMINATION
+    icon = GFX_focus_industry
+    text = AUS_TRADE_DOMINATION
+    prerequisite = { focus = AUS_U_BOATS }
+    prerequisite = { focus = AUS_TRADE_WAR }
+    x = 2
+    y = 1
+    relative_position_id = AUS_U_BOATS
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = AUS_SUPREMACY_OF_NAVAL_AIR
+    icon = GFX_focus_industry
+    text = AUS_SUPREMACY_OF_NAVAL_AIR
+    prerequisite = { focus = AUS_NAVY_FUTURE }
+    prerequisite = { focus = AUS_DEATH_FROM_ABOVE }
+    x = 2
+    y = 1
+    relative_position_id = AUS_NAVY_FUTURE
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = AUS_REFORMED_NAVY
+    icon = GFX_focus_industry
+    text = AUS_REFORMED_NAVY
+    prerequisite = { focus = AUS_AMPHIBIOUS_ASSAULT focus = AUS_TRADE_DOMINATION focus = AUS_SUPREMACY_OF_NAVAL_AIR }
+    x = 0
+    y = 1
+    relative_position_id = AUS_TRADE_DOMINATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+        Reformed_Navy
+      }
+    }
+  }
+
+
+  ############AF
+  focus = {
+    id = AUS_KAISER_AIR
+    icon = GFX_focus_industry
+    text = AUS_KAISER_AIR
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = AUS_KAISER_MARINE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = AUS_BUILD_AIRFIELDS
+    icon = GFX_focus_industry
+    text = AUS_BUILD_FIELDS
+    prerequisite = { focus = AUS_KAISER_AIR }
+    x = 0
+    y = 1
+    relative_position_id = AUS_KAISER_AIR
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      153 = {
+        add_building_construction = {
+            type = air_base
+            level = 2
+            instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_BURN_TO_GROUND
+    icon = GFX_focus_industry
+    text = AUS_BURN_TO_GROUND
+    prerequisite = { focus = AUS_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = AUS_AIRLAND_BATTLE }
+    mutually_exclusive = { focus = ALL_USE_PLANES }
+    x = -6
+    y = 1
+    relative_position_id = AUS_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_strategic_destruction
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_RAIN_OF_FIRE
+    icon = GFX_focus_industry
+    text = AUS_CAPITAL_SHIPS
+    prerequisite = { focus = AUS_BURN_TO_GROUND }
+    x = -2
+    y = 1
+    relative_position_id = AUS_BURN_TO_GROUND
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_strategic_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_RAIN_OF_DEATH
+    icon = GFX_focus_industry
+    text = AUS_RAIN_OF_DEATH
+    prerequisite = { focus = AUS_BURN_TO_GROUND }
+    x = 2
+    y = 1
+    relative_position_id = AUS_BURN_TO_GROUND
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = tactical_bomber
+      }
+    }
+  }
+
+
+
+  focus = {
+    id = AUS_AIRLAND_BATTLE
+    icon = GFX_focus_industry
+    text = AUS_AIRLAND_BATTLE
+    prerequisite = { focus = AUS_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = AUS_BURN_TO_GROUND }
+    mutually_exclusive = { focus = AUS_ALL_USE_PLANES }
+    x = 0
+    y = 1
+    relative_position_id = AUS_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_battlefield_support
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_STRAFING
+    icon = GFX_focus_industry
+    text = AUS_STRAFING
+    prerequisite = { focus = AUS_AIRLAND_BATTLE }
+    x = -2
+    y = 1
+    relative_position_id = AUS_AIRLAND_BATTLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = light_fighter
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_ACES
+    icon = GFX_focus_industry
+    text = AUS_ACES
+    prerequisite = { focus = AUS_AIRLAND_BATTLE }
+    x = 2
+    y = 1
+    relative_position_id = AUS_AIRLAND_BATTLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = cas_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_ALL_USE_PLANES
+    icon = GFX_focus_industry
+    text = ALL_USE_PLANES
+    prerequisite = { focus = AUS_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = AUS_BURN_TO_GROUND }
+    mutually_exclusive = { focus = AUS_AIRLAND_BATTLE }
+    x = 6
+    y = 1
+    relative_position_id = AUS_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_operational_integrity
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_BOMBERS
+    icon = GFX_focus_industry
+    text = AUS_BOMBERS
+    prerequisite = { focus = AUS_ALL_USE_PLANES }
+    x = -2
+    y = 1
+    relative_position_id = AUS_ALL_USE_PLANES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = tactical_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_ANTI_TROOP_BOMBS
+    icon = GFX_focus_industry
+    text = AUS_ANTI_TROOP_BOMBS
+    prerequisite = { focus = AUS_ALL_USE_PLANES }
+    x = 2
+    y = 1
+    relative_position_id = AUS_ALL_USE_PLANES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cas_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = AUS_RAIN_OF_ANNIHILATION
+    icon = GFX_focus_industry
+    text = AUS_RAIN_OF_ANNIHILATION
+    prerequisite = { focus = AUS_RAIN_OF_FIRE }
+    prerequisite = { focus = AUS_RAIN_OF_DEATH }
+    x = -2
+    y = 1
+    relative_position_id = AUS_RAIN_OF_DEATH
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = AUS_DOGFIGHTING
+    icon = GFX_focus_industry
+    text = AUS_DOGFIGHTING
+    prerequisite = { focus = AUS_STRAFING }
+    prerequisite = { focus = AUS_ACES }
+    x = 2
+    y = 1
+    relative_position_id = AUS_STRAFING
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = AUS_BOMBS_EVERYWHERE
+    icon = GFX_focus_industry
+    text =  AUS_BOMBS_EVERYWHERE
+    prerequisite = { focus = AUS_BOMBERS }
+    prerequisite = { focus = AUS_ANTI_TROOP_BOMBS }
+    x = 2
+    y = 1
+    relative_position_id = AUS_BOMBERS
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = AUS_REFORMED_AIR_FORCE
+    icon = GFX_focus_industry
+    text = AUS_REFORMED_AIR_FORCE
+    prerequisite = { focus = AUS_BOMBS_EVERYWHERE focus = AUS_DOGFIGHTING focus = AUS_RAIN_OF_ANNIHILATION }
+    x = 0
+    y = 1
+    relative_position_id = AUS_DOGFIGHTING
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+        Reformed_Air_Force
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+	########political
+	focus = {
+    id = AUS_KAISER_SPEECH
+    icon = GFX_focus_industry
+    text = AUS_KAISER_SPEECH
+    #prerequisite = { focus = AUS_BOMBS_EVERYWHERE focus = AUS_DOGFIGHTING focus = AUS_RAIN_OF_ANNIHILATION }
+    x = 16
+    y = 0
+    relative_position_id = AUS_BUILD_INDUSTRY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = 120
+    }
+  }
+
+
+	focus = {
+    id = AUS_ABSOLUTISM
+    icon = GFX_focus_industry
+    text = AUS_ABSOLUTISM
+    prerequisite = { focus = AUS_KAISER_SPEECH }
+		mutually_exclusive = { focus = AUS_REFORM }
+		mutually_exclusive = { focus = AUS_NAT_REGEN }
+    x = -4
+    y = 1
+    relative_position_id = AUS_KAISER_SPEECH
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = -25
+    }
+  }
+
+	focus = {
+    id = AUS_AUTOCRACY
+    icon = GFX_focus_industry
+    text = AUS_AUTOCRACY
+    prerequisite = { focus = AUS_ABSOLUTISM }
+		mutually_exclusive = { focus = AUS_TO_BARRICADES }
+    x = -2
+    y = 1
+    relative_position_id = AUS_ABSOLUTISM
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = -25
+    }
+  }
+
+	focus = {
+    id = AUS_ALL_HAIL_KAISER
+    icon = GFX_focus_industry
+    text = AUS_ALL_HAIL_KAISER
+    prerequisite = { focus = AUS_AUTOCRACY }
+    x = 0
+    y = 1
+    relative_position_id = AUS_AUTOCRACY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = -25
+    }
+  }
+
+	focus = {
+    id = AUS_FOR_THE_FUHRER
+    icon = GFX_focus_industry
+    text = AUS_FOR_THE_FUHRER
+    prerequisite = { focus = AUS_ALL_HAIL_KAISER }
+    x = 0
+    y = 1
+    relative_position_id = AUS_ALL_HAIL_KAISER
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = -25
+    }
+  }
+
+	focus = {
+		id = AUS_TO_BARRICADES
+		icon = GFX_focus_industry
+		text = AUS_TO_BARRICADES
+		prerequisite = { focus = AUS_ABSOLUTISM }
+		mutually_exclusive = { focus = AUS_AUTOCRACY }
+		x = 2
+		y = 1
+		relative_position_id = AUS_ABSOLUTISM
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = AUS_LONG_LIVE_REV
+		icon = GFX_focus_industry
+		text = AUS_LONG_LIVE_REV
+		prerequisite = { focus = AUS_TO_BARRICADES }
+		x = 0
+		y = 1
+		relative_position_id = AUS_TO_BARRICADES
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+
+	focus = {
+		id = AUS_FORM_INTERNATIONALE
+		icon = GFX_focus_industry
+		text = AUS_FORM_INTERNATIONALE
+		prerequisite = { focus = AUS_LONG_LIVE_REV }
+		x = 0
+		y = 1
+		relative_position_id = AUS_LONG_LIVE_REV
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_political_power = -25
+		}
+	}
+
+
+	focus = {
+    id = AUS_REFORM
+    icon = GFX_focus_industry
+    text = AUS_REFORM
+    prerequisite = { focus = AUS_KAISER_SPEECH }
+		mutually_exclusive = { focus = AUS_ABSOLUTISM }
+		mutually_exclusive = { focus = AUS_NAT_REGEN }
+    x = 0
+    y = 1
+    relative_position_id = AUS_KAISER_SPEECH
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = 25
+    }
+  }
+
+	focus = {
+    id = AUS_STRENGHTHEN_DIET
+    icon = GFX_focus_industry
+    text = AUS_STRENGHTHEN_DIET
+    prerequisite = { focus = AUS_REFORM }
+    x = 0
+    y = 1
+    relative_position_id = AUS_REFORM
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = 25
+    }
+  }
+
+	focus = {
+    id = AUS_CALL_REICHSRAT
+    icon = GFX_focus_industry
+    text = AUS_CALL_REICHSRAT
+    prerequisite = { focus = AUS_STRENGHTHEN_DIET }
+    x = 0
+    y = 1
+    relative_position_id = AUS_STRENGHTHEN_DIET
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = 25
+    }
+  }
+
+	focus = {
+    id = AUS_FREE_AUSTRIA
+    icon = GFX_focus_industry
+    text = AUS_FREE_AUSTRIA
+    prerequisite = { focus = AUS_CALL_REICHSRAT }
+    x = 0
+    y = 1
+    relative_position_id = AUS_CALL_REICHSRAT
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = 25
+    }
+  }
+
+
+
+	focus = {
+    id = AUS_NAT_REGEN
+    icon = GFX_focus_industry
+    text = AUS_NAT_REGEN
+    prerequisite = { focus = AUS_KAISER_SPEECH }
+		mutually_exclusive = { focus = AUS_REFORM }
+		mutually_exclusive = { focus = AUS_ABSOLUTISM }
+    x = 2
+    y = 1
+    relative_position_id = AUS_KAISER_SPEECH
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_EMPOWER_V_FRONT
+    icon = GFX_focus_industry
+    text = AUS_EMPOWER_V_FRONT
+    prerequisite = { focus = AUS_NAT_REGEN }
+    x = 0
+    y = 1
+    relative_position_id = AUS_NAT_REGEN
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_ABOLISH_MONARCHY
+    icon = GFX_focus_industry
+    text = AUS_ABOLISH_MONARCHY
+    prerequisite = { focus = AUS_EMPOWER_V_FRONT }
+    x = 0
+    y = 1
+    relative_position_id = AUS_EMPOWER_V_FRONT
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_RISE_OF_EVIL
+    icon = GFX_focus_industry
+    text = AUS_RISE_OF_EVIL
+    prerequisite = { focus = AUS_ABOLISH_MONARCHY }
+    x = 0
+    y = 1
+    relative_position_id = AUS_ABOLISH_MONARCHY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+
+
+	focus = {
+    id = AUS_METTERNICH
+    icon = GFX_focus_industry
+    text = AUS_METTERNICH
+    prerequisite = { focus = AUS_FOR_THE_FUHRER focus = AUS_FORM_INTERNATIONALE focus = AUS_LONG_LIVE_REV focus = AUS_RISE_OF_EVIL }
+    x = 0
+    y = 2
+    relative_position_id = AUS_LONG_LIVE_REV
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_UPHOLD_CONCERT
+    icon = GFX_focus_industry
+    text = AUS_UPHOLD_CONCERT
+    prerequisite = { focus = AUS_METTERNICH }
+    x = 0
+    y = -2
+    relative_position_id = AUS_METTERNICH
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_INVITE_BALKANS
+    icon = GFX_focus_industry
+    text = AUS_INVITE_BALKANS
+    prerequisite = { focus = AUS_UPHOLD_CONCERT }
+    x = 0
+    y = -2
+    relative_position_id = AUS_UPHOLD_CONCERT
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_INVITE_SCANDANAVIA
+    icon = GFX_focus_industry
+    text = AUS_INVITE_SCANDANAVIA
+    prerequisite = { focus = AUS_INVITE_BALKANS }
+    x = 0
+    y = -2
+    relative_position_id = AUS_INVITE_BALKANS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_INVITE_BRITAIN
+    icon = GFX_focus_industry
+    text = AUS_INVITE_BRITAIN
+    prerequisite = { focus = AUS_INVITE_SCANDANAVIA }
+    x = 0
+    y = -2
+    relative_position_id = AUS_INVITE_SCANDANAVIA
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+	focus = {
+    id = AUS_BELLI_GERANT
+    icon = GFX_focus_industry
+    text = AUS_BELLI_GERANT
+    prerequisite = { focus = AUS_INVITE_BRITAIN }
+    x = 0
+    y = -2
+    relative_position_id = AUS_INVITE_BRITAIN
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_stability = -0.25
+    }
+  }
+
+
+}

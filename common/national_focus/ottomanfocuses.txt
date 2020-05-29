@@ -1,0 +1,1604 @@
+focus_tree = {
+	id = french_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 11
+			tag = TUR
+		}
+	}
+
+  focus = {
+    id = TUR_BUILD_INDUSTRY
+    icon = GFX_focus_industry
+    text = TUR_BOOST_ECONOMY
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 0
+    y = 0
+    #relative_position_id = ITA_industrial_effort_2
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 2
+        category = industry
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_DEV_ISTANBUL_SCHEME
+    icon = GFX_focus_industry
+    text = TUR_DEV_ISTANBUL_SCHEME
+    prerequisite = { focus = TUR_BUILD_INDUSTRY }
+    x = 0
+    y = 1
+    relative_position_id = TUR_BUILD_INDUSTRY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      341 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+      }
+  }
+
+  focus = {
+    id = TUR_DEV_TURKEY
+    icon = GFX_focus_industry
+    text = TUR_DEV_TURKEY
+    prerequisite = { focus = TUR_DEV_ISTANBUL_SCHEME }
+    x = -4
+    y = 1
+    relative_position_id = TUR_DEV_ISTANBUL_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_research_slot = 1
+     }
+  }
+
+	focus = {
+    id = TUR_DEV_ARABIA
+    icon = GFX_focus_industry
+    text = TUR_DEV_ARABIA
+    prerequisite = { focus = TUR_DEV_ISTANBUL_SCHEME }
+    x = 4
+    y = 1
+    relative_position_id = TUR_DEV_ISTANBUL_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = excavation_tech
+      }
+    }
+  }
+
+
+  focus = {
+    id = TUR_DEV_AEGEAN
+    icon = GFX_focus_industry
+    text = TUR_DEV_AEGEAN
+    prerequisite = { focus = TUR_DEV_TURKEY }
+    x = -2
+    y = 1
+    relative_position_id = TUR_DEV_TURKEY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      339 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+      }
+      347 = {
+
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+     }
+  }
+
+	focus = {
+    id = TUR_DEV_MEDITERRANEAN
+    icon = GFX_focus_industry
+    text = TUR_DEV_MEDITERRANEAN
+    prerequisite = { focus = TUR_DEV_TURKEY }
+    x = 2
+    y = 1
+    relative_position_id = TUR_DEV_TURKEY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      344 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+      }
+      345 = {
+
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+     }
+  }
+
+	focus = {
+		id = TUR_DEV_BLACK_SEA
+		icon = GFX_focus_industry
+		text = TUR_DEV_BLACK_SEA
+		prerequisite = { focus = TUR_DEV_TURKEY }
+		x = 0
+		y = 1
+		relative_position_id = TUR_DEV_TURKEY
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			354 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			355 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+
+		 }
+	}
+
+	focus = {
+		id = TUR_STRONG_TURKEY
+		icon = GFX_focus_industry
+		text = TUR_STRONG_TURKEY
+		prerequisite = { focus = TUR_DEV_AEGEAN }
+		prerequisite = { focus = TUR_DEV_MEDITERRANEAN }
+		prerequisite = { focus = TUR_DEV_BLACK_SEA }
+		x = 0
+		y = 1
+		relative_position_id = TUR_DEV_BLACK_SEA
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_state = {
+										limit = {
+												AND = {
+														is_core_of = TUR
+
+												}
+										}
+										add_state_modifier = {
+												modifier = {
+														production_factory_max_efficiency_factor = 0.1
+														production_speed_industrial_complex_factor = 0.15
+												}
+										}
+								}
+		 				}
+		}
+
+  focus = {
+    id = TUR_DEV_IRAQ
+    icon = GFX_focus_industry
+    text = TUR_DEV_IRAQ
+    prerequisite = { focus = TUR_DEV_ARABIA }
+    x = -2
+    y = 1
+    relative_position_id = TUR_DEV_ARABIA
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+			291 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			676 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+     }
+  }
+	focus = {
+		id = TUR_DEV_SYRIA
+		icon = GFX_focus_industry
+		text = TUR_DEV_SYRIA
+		prerequisite = { focus = TUR_DEV_ARABIA }
+		x = 0
+		y = 1
+		relative_position_id = TUR_DEV_ARABIA
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			677 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			554 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+		 }
+	}
+	focus = {
+		id = TUR_DEV_HOLY_LAND
+		icon = GFX_focus_industry
+		text = TUR_DEV_HOLY_LAND
+		prerequisite = { focus = TUR_DEV_ARABIA }
+		x = 2
+		y = 1
+		relative_position_id = TUR_DEV_ARABIA
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			553 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+
+      454 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+		 }
+	}
+
+	focus = {
+		id = TUR_STRONG_ARABIA
+		icon = GFX_focus_industry
+		text = TUR_STRONG_ARABIA
+		prerequisite = { focus = TUR_DEV_IRAQ }
+		prerequisite = { focus = TUR_DEV_SYRIA }
+		prerequisite = { focus = TUR_DEV_HOLY_LAND }
+		x = 0
+		y = 1
+		relative_position_id = TUR_DEV_SYRIA
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_state = {
+										limit = {
+												is_core_of = TUR
+										}
+										add_state_modifier = {
+												modifier = {
+														local_resources_factor = 0.2
+														production_oil_factor = 0.15
+														production_speed_infrastructure_factor = 0.25
+												}
+										}
+								}
+		 				}
+		}
+
+  focus = {
+    id = TUR_FOR_THE_SULTAN
+    icon = GFX_focus_industry
+    text = TUR_FOR_THE_SULTAN
+    prerequisite = { focus = TUR_STRONG_TURKEY }
+		prerequisite = { focus = TUR_STRONG_ARABIA }
+    x = -4
+    y = 1
+    relative_position_id = TUR_STRONG_ARABIA
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      swap_ideas = {
+        remove_idea = Tanzimat
+        add_idea = Finished_Tanzimat
+      }
+
+     }
+  }
+
+
+
+
+
+
+  ####ARMY
+  focus = {
+    id = TUR_OTTOMAN_ARMY
+    icon = GFX_focus_industry
+    text = TUR_OTTOMAN_ARMY
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 16
+    y = 0
+    relative_position_id = TUR_BUILD_INDUSTRY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      army_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = TUR_TURKISH_COMMAND
+    icon = GFX_focus_industry
+    text = TUR_TURKISH_COMMAND
+    prerequisite = { focus = TUR_OTTOMAN_ARMY }
+    mutually_exclusive = {focus = TUR_DIVERSE_COMMAND}
+    x = -4
+    y = 1
+    relative_position_id = TUR_OTTOMAN_ARMY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+          add_ideas = {
+            Turkish_Command
+          }
+    }
+  }
+
+  focus = {
+    id = TUR_FOCUS_ON_FIREPOWER
+    icon = GFX_focus_industry
+    text = FOCUS_ON_FIREPOWER
+    prerequisite = { focus = TUR_TURKISH_COMMAND }
+    mutually_exclusive = { focus = TUR_FOCUS_ON_SPEED }
+
+    x = 2
+    y = 1
+    relative_position_id = TUR_TURKISH_COMMAND
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_superior_firepower
+        }
+    }
+  }
+
+
+  focus = {
+    id = TUR_MAS_CONTRACTS
+    icon = GFX_focus_industry
+    text = TUR_MAS_CONTRACTS
+    prerequisite = { focus = TUR_FOCUS_ON_FIREPOWER }
+    x = 0
+    y = 1
+    relative_position_id = TUR_FOCUS_ON_FIREPOWER
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = artillery
+      }
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = infantry_weapons
+      }
+      }
+    }
+
+  focus = {
+    id = TUR_MASTER_ARTILLERY
+    icon = GFX_focus_industry
+    text = TUR_MASTER_ARTILLERY
+    prerequisite = { focus = TUR_MAS_CONTRACTS }
+    x = 0
+    y = 1
+    relative_position_id = TUR_MAS_CONTRACTS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Hellsfire
+      }
+     }
+  }
+
+
+    focus = {
+      id = TUR_FOCUS_ON_SPEED
+      icon = GFX_focus_industry
+      text = FOCUS_ON_SPEED
+      prerequisite = { focus = TUR_TURKISH_COMMAND }
+      mutually_exclusive = { focus = TUR_FOCUS_ON_FIREPOWER }
+
+      x = -2
+      y = 1
+      relative_position_id = TUR_TURKISH_COMMAND
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_mobile_warfare
+        }
+     }
+    }
+
+    focus = {
+      id = TUR_TANK_CORP
+      icon = GFX_focus_industry
+      text = TUR_TANK_CORP
+      prerequisite = { focus = TUR_FOCUS_ON_SPEED }
+      x = 0
+      y = 1
+      relative_position_id = TUR_FOCUS_ON_SPEED
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_light_armor
+        }
+        }
+      }
+
+    focus = {
+      id = TUR_MASTER_GUERRE_ECLAIR
+      icon = GFX_focus_industry
+      text = TUR_MASTER_GUERRE_ECLAIR
+      prerequisite = { focus = TUR_TANK_CORP }
+      x = 0
+      y = 1
+      relative_position_id = TUR_TANK_CORP
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_ideas = {
+          Lightning_War
+        }
+       }
+    }
+
+
+	focus = {
+    id = TUR_DIVERSE_COMMAND
+    icon = GFX_focus_industry
+    text = TUR_DIVERSE_COMMAND
+    prerequisite = { focus = TUR_OTTOMAN_ARMY }
+    mutually_exclusive = { focus = TUR_TURKISH_COMMAND }
+    x = 4
+    y = 1
+    relative_position_id = TUR_OTTOMAN_ARMY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+          add_ideas = {
+            Diverse_Command
+          }
+    }
+  }
+
+  focus = {
+    id = TUR_FOCUS_ON_BATTLEPLAN
+    icon = GFX_focus_industry
+    text = TUR_FOCUS_ON_BATTLEPLAN
+    prerequisite = { focus = TUR_DIVERSE_COMMAND }
+    mutually_exclusive = { focus = TUR_FOCUS_ON_SIZE }
+    x = -2
+    y = 1
+    relative_position_id = TUR_DIVERSE_COMMAND
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_grand_battle_plan
+      }
+     }
+  }
+
+  focus = {
+    id = TUR_ANKARA_DEPART_OF_DEFENSE
+    icon = GFX_focus_industry
+    text = TUR_ANKARA_DEPART_OF_DEFENSE
+    prerequisite = { focus = TUR_FOCUS_ON_BATTLEPLAN }
+    x = 0
+    y = 1
+    relative_position_id = TUR_FOCUS_ON_BATTLEPLAN
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+		available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = cat_grand_battle_plan
+      }
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = support_tech
+      }
+     }
+  }
+
+
+  focus = {
+    id = TUR_MASTER_TACTICS
+    icon = GFX_focus_industry
+    text = TUR_MASTER_TACTICS
+    prerequisite = { focus = TUR_ANKARA_DEPART_OF_DEFENSE }
+    x = 0
+    y = 1
+    relative_position_id = TUR_ANKARA_DEPART_OF_DEFENSE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_ideas = {
+          Tactical_Genius
+        }
+      }
+   }
+
+	 focus = {
+		 id = TUR_FOCUS_ON_SIZE
+		 icon = GFX_focus_industry
+		 text = TUR_FOCUS_ON_SIZE
+		 prerequisite = { focus = TUR_DIVERSE_COMMAND }
+		 mutually_exclusive = { focus = TUR_FOCUS_ON_BATTLEPLAN }
+		 x = 2
+		 y = 1
+		 relative_position_id = TUR_DIVERSE_COMMAND
+		 cost = 10
+		 ai_will_do = {
+			 factor = 1
+		 }
+
+		 available_if_capitulated = yes
+		 search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		 completion_reward = {
+			 add_tech_bonus {
+				 bonus = 1
+				 uses = 1
+				 category = cat_mass_assault
+			 }
+			}
+	 }
+
+	 focus = {
+		 id = TUR_CONSCRIPT_THE_MASSES
+		 icon = GFX_focus_industry
+		 text = TUR_CONSCRIPT_THE_MASSES
+		 prerequisite = { focus = TUR_FOCUS_ON_SIZE }
+		 x = 0
+		 y = 1
+		 relative_position_id = TUR_FOCUS_ON_SIZE
+		 cost = 10
+		 ai_will_do = {
+			 factor = 1
+		 }
+
+		 available_if_capitulated = yes
+		 search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		 completion_reward = {
+			 add_ideas = {
+				 extensive_conscription
+			 }
+			}
+	 }
+
+	 focus = {
+		 id = TUR_BRAVE_NEW_EMPIRE
+		 icon = GFX_focus_industry
+		 text = TUR_BRAVE_NEW_EMPIRE
+		 prerequisite = { focus = TUR_CONSCRIPT_THE_MASSES }
+		 x = 0
+		 y = 1
+		 relative_position_id = TUR_CONSCRIPT_THE_MASSES
+		 cost = 10
+		 ai_will_do = {
+			 factor = 1
+		 }
+
+		 available_if_capitulated = yes
+		 search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		 completion_reward = {
+				 add_ideas = {
+					 Brave_New_Empire
+				 }
+			 }
+		 }
+
+  focus = {
+    id = TUR_REVITALIZE_ARMY
+    icon = GFX_focus_industry
+    text = TUR_REVITALIZE_ARMY
+    prerequisite = { focus = TUR_MASTER_ARTILLERY focus = TUR_MASTER_TACTICS focus = TUR_MASTER_GUERRE_ECLAIR focus = TUR_BRAVE_NEW_EMPIRE }
+    x = 2
+    y = 1
+    relative_position_id = TUR_MASTER_ARTILLERY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Army_Future
+      }
+      army_experience = 50
+
+     }
+  }
+
+
+
+  #############Navy
+  focus = {
+    id = TUR_OTTOMAN_FLEET
+    icon = GFX_focus_industry
+    text = TUR_OTTOMAN_FLEET
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = TUR_OTTOMAN_ARMY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = TUR_BUILD_DOCKYARDS
+    icon = GFX_focus_industry
+    text = TUR_BUILD_DOCKYARDS
+    prerequisite = { focus = TUR_OTTOMAN_FLEET }
+    x = 0
+    y = 1
+    relative_position_id = TUR_OTTOMAN_FLEET
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      340 = {
+        add_building_construction = {
+            type = dockyard
+            level = 2
+            instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_TRUE_NAVY
+    icon = GFX_focus_industry
+    text = TUR_TRUE_NAVY
+    prerequisite = { focus = TUR_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = TUR_WOLF_PACKS }
+    mutually_exclusive = { focus = TUR_NAVAL_AVIATION }
+    x = -6
+    y = 1
+    relative_position_id = TUR_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_fleet_in_being
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_CAPITAL_SHIPS
+    icon = GFX_focus_industry
+    text = TUR_CAPITAL_SHIPS
+    prerequisite = { focus = TUR_TRUE_NAVY }
+    x = -2
+    y = 1
+    relative_position_id = TUR_TRUE_NAVY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = bb_tech
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_PROJECT_Z
+    icon = GFX_focus_industry
+    text = TUR_PROJECT_Z
+    prerequisite = { focus = TUR_TRUE_NAVY }
+    x = 2
+    y = 1
+    relative_position_id = TUR_TRUE_NAVY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = ca_tech
+      }
+    }
+  }
+
+
+
+  focus = {
+    id = TUR_WOLF_PACKS
+    icon = GFX_focus_industry
+    text = TUR_WOLF_PACKS
+    prerequisite = { focus = TUR_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = TUR_TRUE_NAVY }
+    mutually_exclusive = { focus = TUR_NAVAL_AVIATION }
+    x = 0
+    y = 1
+    relative_position_id = TUR_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_trade_interdiction
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_U_BOATS
+    icon = GFX_focus_industry
+    text = TUR_U_BOATS
+    prerequisite = { focus = TUR_WOLF_PACKS }
+    x = -2
+    y = 1
+    relative_position_id = TUR_WOLF_PACKS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = ss_tech
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_TRADE_WAR
+    icon = GFX_focus_industry
+    text = TUR_TRADE_WAR
+    prerequisite = { focus = TUR_WOLF_PACKS }
+    x = 2
+    y = 1
+    relative_position_id = TUR_WOLF_PACKS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = dd_tech
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_NAVAL_AVIATION
+    icon = GFX_focus_industry
+    text = TUR_NAVAL_AVIATION
+    prerequisite = { focus = TUR_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = TUR_WOLF_PACKS }
+    mutually_exclusive = { focus = TUR_TRUE_NAVY }
+    x = 6
+    y = 1
+    relative_position_id = TUR_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_base_strike
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_NAVY_FUTURE
+    icon = GFX_focus_industry
+    text = TUR_NAVY_FUTURE
+    prerequisite = { focus = TUR_NAVAL_AVIATION }
+    x = -2
+    y = 1
+    relative_position_id = TUR_NAVAL_AVIATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = naval_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_DEATH_FROM_ABOVE
+    icon = GFX_focus_industry
+    text = TUR_DEATH_FROM_ABOVE
+    prerequisite = { focus = TUR_NAVAL_AVIATION }
+    x = 2
+    y = 1
+    relative_position_id = TUR_NAVAL_AVIATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = cv_tech
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_AMPHIBIOUS_ASSAULT
+    icon = GFX_focus_industry
+    text = TUR_AMPHIBIOUS_ASSAULT
+    prerequisite = { focus = TUR_PROJECT_Z }
+    prerequisite = { focus = TUR_CAPITAL_SHIPS }
+    x = -2
+    y = 1
+    relative_position_id = TUR_PROJECT_Z
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = TUR_TRADE_DOMINATION
+    icon = GFX_focus_industry
+    text = TUR_TRADE_DOMINATION
+    prerequisite = { focus = TUR_U_BOATS }
+    prerequisite = { focus = TUR_TRADE_WAR }
+    x = 2
+    y = 1
+    relative_position_id = TUR_U_BOATS
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = TUR_SUPREMACY_OF_NAVAL_AIR
+    icon = GFX_focus_industry
+    text = TUR_SUPREMACY_OF_NAVAL_AIR
+    prerequisite = { focus = TUR_NAVY_FUTURE }
+    prerequisite = { focus = TUR_DEATH_FROM_ABOVE }
+    x = 2
+    y = 1
+    relative_position_id = TUR_NAVY_FUTURE
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = TUR_REFORMED_NAVY
+    icon = GFX_focus_industry
+    text = TUR_REFORMED_NAVY
+    prerequisite = { focus = TUR_AMPHIBIOUS_ASSAULT focus = TUR_TRADE_DOMINATION focus = TUR_SUPREMACY_OF_NAVAL_AIR }
+    x = 0
+    y = 1
+    relative_position_id = TUR_TRADE_DOMINATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+        Reformed_Navy
+      }
+    }
+  }
+
+
+  ############AF
+  focus = {
+    id = TUR_BUILD_AIR
+    icon = GFX_focus_industry
+    text = TUR_BUILD_AIR
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = TUR_OTTOMAN_FLEET
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = TUR_BUILD_AIRFIELDS
+    icon = GFX_focus_industry
+    text = TUR_BUILD_FIELDS
+    prerequisite = { focus = TUR_BUILD_AIR }
+    x = 0
+    y = 1
+    relative_position_id = TUR_BUILD_AIR
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      346 = {
+        add_building_construction = {
+            type = air_base
+            level = 2
+            instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_BURN_TO_GROUND
+    icon = GFX_focus_industry
+    text = TUR_BURN_TO_GROUND
+    prerequisite = { focus = TUR_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = TUR_AIRLAND_BATTLE }
+    mutually_exclusive = { focus = ALL_USE_PLANES }
+    x = -6
+    y = 1
+    relative_position_id = TUR_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_strategic_destruction
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_RAIN_OF_FIRE
+    icon = GFX_focus_industry
+    text = TUR_CAPITAL_SHIPS
+    prerequisite = { focus = TUR_BURN_TO_GROUND }
+    x = -2
+    y = 1
+    relative_position_id = TUR_BURN_TO_GROUND
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_strategic_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_RAIN_OF_DEATH
+    icon = GFX_focus_industry
+    text = TUR_RAIN_OF_DEATH
+    prerequisite = { focus = TUR_BURN_TO_GROUND }
+    x = 2
+    y = 1
+    relative_position_id = TUR_BURN_TO_GROUND
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = tactical_bomber
+      }
+    }
+  }
+
+
+
+  focus = {
+    id = TUR_AIRLAND_BATTLE
+    icon = GFX_focus_industry
+    text = TUR_AIRLAND_BATTLE
+    prerequisite = { focus = TUR_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = TUR_BURN_TO_GROUND }
+    mutually_exclusive = { focus = TUR_ALL_USE_PLANES }
+    x = 0
+    y = 1
+    relative_position_id = TUR_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_battlefield_support
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_STRAFING
+    icon = GFX_focus_industry
+    text = TUR_STRAFING
+    prerequisite = { focus = TUR_AIRLAND_BATTLE }
+    x = -2
+    y = 1
+    relative_position_id = TUR_AIRLAND_BATTLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = light_fighter
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_ACES
+    icon = GFX_focus_industry
+    text = TUR_ACES
+    prerequisite = { focus = TUR_AIRLAND_BATTLE }
+    x = 2
+    y = 1
+    relative_position_id = TUR_AIRLAND_BATTLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = cas_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_ALL_USE_PLANES
+    icon = GFX_focus_industry
+    text = ALL_USE_PLANES
+    prerequisite = { focus = TUR_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = TUR_BURN_TO_GROUND }
+    mutually_exclusive = { focus = TUR_AIRLAND_BATTLE }
+    x = 6
+    y = 1
+    relative_position_id = TUR_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_operational_integrity
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_BOMBERS
+    icon = GFX_focus_industry
+    text = TUR_BOMBERS
+    prerequisite = { focus = TUR_ALL_USE_PLANES }
+    x = -2
+    y = 1
+    relative_position_id = TUR_ALL_USE_PLANES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = tactical_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_ANTI_TROOP_BOMBS
+    icon = GFX_focus_industry
+    text = TUR_ANTI_TROOP_BOMBS
+    prerequisite = { focus = TUR_ALL_USE_PLANES }
+    x = 2
+    y = 1
+    relative_position_id = TUR_ALL_USE_PLANES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cas_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = TUR_RAIN_OF_ANNIHILATION
+    icon = GFX_focus_industry
+    text = TUR_RAIN_OF_ANNIHILATION
+    prerequisite = { focus = TUR_RAIN_OF_FIRE }
+    prerequisite = { focus = TUR_RAIN_OF_DEATH }
+    x = -2
+    y = 1
+    relative_position_id = TUR_RAIN_OF_DEATH
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = TUR_DOGFIGHTING
+    icon = GFX_focus_industry
+    text = TUR_DOGFIGHTING
+    prerequisite = { focus = TUR_STRAFING }
+    prerequisite = { focus = TUR_ACES }
+    x = 2
+    y = 1
+    relative_position_id = TUR_STRAFING
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = TUR_BOMBS_EVERYWHERE
+    icon = GFX_focus_industry
+    text =  TUR_BOMBS_EVERYWHERE
+    prerequisite = { focus = TUR_BOMBERS }
+    prerequisite = { focus = TUR_ANTI_TROOP_BOMBS }
+    x = 2
+    y = 1
+    relative_position_id = TUR_BOMBERS
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = TUR_REFORMED_AIR_FORCE
+    icon = GFX_focus_industry
+    text = TUR_REFORMED_AIR_FORCE
+    prerequisite = { focus = TUR_BOMBS_EVERYWHERE focus = TUR_DOGFIGHTING focus = TUR_RAIN_OF_ANNIHILATION }
+    x = 0
+    y = 1
+    relative_position_id = TUR_DOGFIGHTING
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+        Reformed_Air_Force
+      }
+    }
+  }
+}

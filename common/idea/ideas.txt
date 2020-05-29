@@ -1,0 +1,337 @@
+ideas = {
+
+	country = {
+
+		GroBosterreich = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				war_support_factor = 0.15
+			}
+		}
+
+		Absolutism = {
+
+			allowed = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.05
+			}
+		}
+
+		Bohemian_Outrage = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.1
+			}
+		}
+		Nemetzi_dal = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+		Giovane_Italia = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				war_support_factor = -0.1
+				political_power_factor = -0.15
+			}
+		}
+		Croat_Support = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				conscription = 0.015
+				army_org_factor = 0.08
+			}
+		}
+
+		####Russia
+
+		Nicholas_the_2nd = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.2
+				army_org_factor = -0.08
+			}
+		}
+
+		Legacy_of_1905 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+		Army_Reform = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				training_time_factor = 0.15
+			}
+		}
+		Agrarian-Industrial_Divide = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.1
+				production_speed_buildigns_factor = -0.1
+			}
+		}
+
+		####Germany
+		Firece_Revanchism = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.03
+				war_support_factor = 0.15
+				fascism_drift = 0.10
+			}
+		}
+		Mackensen_Reforms = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = 0.1
+				army_morale_factor = 0.1
+				army_infantry_attack_factor = 0.15
+				army_armor_speed_factor	= 0.15
+				army_armor_attack_factor = 0.15
+			}
+		}
+		Revolutionary_Treason = {
+
+			allowed = {
+				has_government = fascism
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor  = -0.15
+				conscription_factor = -0.1
+				political_power_gain = -0.5
+			}
+		}
+
+
+		######France
+
+		Constitution_of_1927 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				neutrality_drift = 0.05
+			}
+		}
+
+		Bonapartist_Ambition = {
+
+			allowed = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+				justify_war_goal_time = 0.25
+				army_morale_factor = 0.2
+			}
+		}
+
+		Haven_of_Refugees = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				army_org_factor = 0.1
+			}
+		}
+
+
+		########Ottomans
+
+		Tanzimat = {
+
+			allowed = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.1
+				consumer_goods_factor = 0.05
+			}
+		}
+	}
+}

@@ -1,0 +1,2312 @@
+focus_tree = {
+	id = french_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 11
+			tag = FRA
+		}
+	}
+
+  focus = {
+    id = FRA_BUILD_INDUSTRY
+    icon = GFX_focus_industry
+    text = FRA_BOOST_ECONOMY
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 0
+    y = 0
+    #relative_position_id = ITA_industrial_effort_2
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 2
+        category = industry
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_DEV_PARIS_SCHEME
+    icon = GFX_focus_industry
+    text = FRA_DEV_PARIS_SCHEME
+    prerequisite = { focus = FRA_BUILD_INDUSTRY }
+    x = 0
+    y = 1
+    relative_position_id = FRA_BUILD_INDUSTRY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      16 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 2
+          }
+      }
+  }
+
+  focus = {
+    id = FRA_DEV_METROPOLE
+    icon = GFX_focus_industry
+    text = FRA_DEV_METROPOLE
+    prerequisite = { focus = FRA_DEV_PARIS_SCHEME }
+    x = -4
+    y = 1
+    relative_position_id = FRA_DEV_PARIS_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_research_slot = 1
+     }
+  }
+
+	focus = {
+    id = FRA_DEV_COLONIES
+    icon = GFX_focus_industry
+    text = FRA_DEV_COLONIES
+    prerequisite = { focus = FRA_DEV_PARIS_SCHEME }
+    x = 4
+    y = 1
+    relative_position_id = FRA_DEV_PARIS_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+
+     }
+  }
+
+
+  focus = {
+    id = FRA_DEV_NORTH_FRANCE
+    icon = GFX_focus_industry
+    text = FRA_DEV_NORTH_FRANCE
+    prerequisite = { focus = FRA_DEV_METROPOLE }
+    x = -2
+    y = 1
+    relative_position_id = FRA_DEV_METROPOLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      785 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+      }
+      29 = {
+
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+     }
+  }
+
+	focus = {
+    id = FRA_DEV_SOUTH_FRANCE
+    icon = GFX_focus_industry
+    text = FRA_DEV_SOUTH_FRANCE
+    prerequisite = { focus = FRA_DEV_METROPOLE }
+    x = 2
+    y = 1
+    relative_position_id = FRA_DEV_METROPOLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      21 = {
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+      }
+      33 = {
+
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+
+                }
+                add_extra_state_shared_building_slots = 1
+          }
+
+     }
+  }
+
+	focus = {
+		id = FRA_DEV_RHINE
+		icon = GFX_focus_industry
+		text = FRA_DEV_RHINE
+		prerequisite = { focus = FRA_DEV_METROPOLE }
+		x = 0
+		y = 1
+		relative_position_id = FRA_DEV_METROPOLE
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			51 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			42 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+
+		 }
+	}
+
+	focus = {
+		id = FRA_STRONG_MAINLAND
+		icon = GFX_focus_industry
+		text = FRA_STRONG_MAINLAND
+		prerequisite = { focus = FRA_DEV_NORTH_FRANCE }
+		prerequisite = { focus = FRA_DEV_SOUTH_FRANCE }
+		prerequisite = { focus = FRA_DEV_RHINE }
+		x = 0
+		y = 1
+		relative_position_id = FRA_DEV_RHINE
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_state = {
+										limit = {
+												AND = {
+														is_core_of = FRA
+
+												}
+										}
+										add_state_modifier = {
+												modifier = {
+														production_factory_max_efficiency_factor = 0.1
+														production_speed_industrial_complex_factor = 0.15
+												}
+										}
+								}
+		 				}
+		}
+
+  focus = {
+    id = FRA_DEV_NORTH_AFRICA
+    icon = GFX_focus_industry
+    text = FRA_DEV_NORTH_AFRICA
+    prerequisite = { focus = FRA_DEV_COLONIES }
+    x = -2
+    y = 1
+    relative_position_id = FRA_DEV_COLONIES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+			460 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			458 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+     }
+  }
+	focus = {
+		id = FRA_DEV_WEST_AFRICA
+		icon = GFX_focus_industry
+		text = FRA_DEV_WEST_AFRICA
+		prerequisite = { focus = FRA_DEV_COLONIES }
+		x = 0
+		y = 1
+		relative_position_id = FRA_DEV_COLONIES
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			778 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			272 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+		 }
+	}
+	focus = {
+		id = FRA_DEV_INDOCHINA
+		icon = GFX_focus_industry
+		text = FRA_DEV_INDOCHINA
+		prerequisite = { focus = FRA_DEV_COLONIES }
+		x = 2
+		y = 1
+		relative_position_id = FRA_DEV_COLONIES
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			286 = {
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+			}
+			670 = {
+
+								add_building_construction = {
+										type = industrial_complex
+										level = 1
+										instant_build = yes
+
+								}
+								add_extra_state_shared_building_slots = 1
+					}
+		 }
+	}
+
+	focus = {
+		id = FRA_STRONG_COLONIES
+		icon = GFX_focus_industry
+		text = FRA_STRONG_COLONIES
+		prerequisite = { focus = FRA_DEV_NORTH_AFRICA }
+		prerequisite = { focus = FRA_DEV_WEST_AFRICA }
+		prerequisite = { focus = FRA_DEV_INDOCHINA }
+		x = 0
+		y = 1
+		relative_position_id = FRA_DEV_WEST_AFRICA
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			every_state = {
+										limit = {
+												AND = {
+														is_owned_by = FRA
+												}
+												NOT = {
+													is_core_of = FRA
+												}
+										}
+										add_state_modifier = {
+												modifier = {
+														local_resources_factor = 0.2
+														production_oil_factor = 0.15
+														production_speed_infrastructure_factor = 0.25
+												}
+										}
+								}
+		 				}
+		}
+
+  focus = {
+    id = FRA_POUR_LE_EMPEROR
+    icon = GFX_focus_industry
+    text = FRA_POUR_LE_EMPEROR
+    prerequisite = { focus = FRA_STRONG_MAINLAND }
+		prerequisite = { focus = FRA_STRONG_COLONIES }
+    x = 0
+    y = 4
+    relative_position_id = FRA_DEV_PARIS_SCHEME
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Booming_Economy
+      }
+
+     }
+  }
+
+
+
+
+
+
+  ####ARMY
+  focus = {
+    id = FRA_ARMEE_FRANCAISE
+    icon = GFX_focus_industry
+    text = FRA_ARMEE_FRANCAISE
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = FRA_SENATE_ELECTIONS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      army_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = FRA_RUSSIAN_ADVISORS
+    icon = GFX_focus_industry
+    text = FRA_RUSSIAN_ADVISORS
+    prerequisite = { focus = FRA_ARMEE_FRANCAISE }
+    mutually_exclusive = {focus = FRA_GERMAN_ADVISORS}
+    x = -4
+    y = 1
+    relative_position_id = FRA_ARMEE_FRANCAISE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+          add_ideas = {
+            Russian_Advisors
+          }
+    }
+  }
+
+	focus = {
+    id = FRA_FOCUS_ON_BATTLEPLAN
+    icon = GFX_focus_industry
+    text = FRA_FOCUS_ON_BATTLEPLAN
+    prerequisite = { focus = FRA_RUSSIAN_ADVISORS }
+    mutually_exclusive = { focus = FRA_FOCUS_ON_SIZE }
+    x = -2
+    y = 1
+    relative_position_id = FRA_RUSSIAN_ADVISORS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_grand_battle_plan
+      }
+     }
+  }
+
+  focus = {
+    id = FRA_PARIS_INSTALLATION_MILITAIRE
+    icon = GFX_focus_industry
+    text = FRA_PARIS_INSTALLATION_MILITAIRE
+    prerequisite = { focus = FRA_FOCUS_ON_BATTLEPLAN }
+    x = 0
+    y = 1
+    relative_position_id = FRA_FOCUS_ON_BATTLEPLAN
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+		available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = cat_grand_battle_plan
+      }
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = support_tech
+      }
+     }
+  }
+
+
+  focus = {
+    id = FRA_MASTER_TACTICS
+    icon = GFX_focus_industry
+    text = FRA_MASTER_TACTICS
+    prerequisite = { focus = FRA_PARIS_INSTALLATION_MILITAIRE }
+    x = 0
+    y = 1
+    relative_position_id = FRA_PARIS_INSTALLATION_MILITAIRE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_ideas = {
+          Tactical_Genius
+        }
+      }
+   }
+
+	 focus = {
+		 id = FRA_FOCUS_ON_SIZE
+		 icon = GFX_focus_industry
+		 text = FRA_FOCUS_ON_SIZE
+		 prerequisite = { focus = FRA_RUSSIAN_ADVISORS }
+		 mutually_exclusive = { focus = FRA_FOCUS_ON_BATTLEPLAN }
+		 x = 2
+		 y = 1
+		 relative_position_id = FRA_RUSSIAN_ADVISORS
+		 cost = 10
+		 ai_will_do = {
+			 factor = 1
+		 }
+
+		 available_if_capitulated = yes
+		 search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		 completion_reward = {
+			 add_tech_bonus {
+				 bonus = 1
+				 uses = 1
+				 category = cat_mass_assault
+			 }
+			}
+	 }
+
+	 focus = {
+		 id = FRA_CONSCRIPT_THE_MASSES
+		 icon = GFX_focus_industry
+		 text = FRA_CONSCRIPT_THE_MASSES
+		 prerequisite = { focus = FRA_FOCUS_ON_SIZE }
+		 x = 0
+		 y = 1
+		 relative_position_id = FRA_FOCUS_ON_SIZE
+		 cost = 10
+		 ai_will_do = {
+			 factor = 1
+		 }
+
+		 available_if_capitulated = yes
+		 search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		 completion_reward = {
+			 add_ideas = {
+				 extensive_conscription
+			 }
+			}
+	 }
+
+	 focus = {
+		 id = FRA_BRAVE_NEW_EMPIRE
+		 icon = GFX_focus_industry
+		 text = FRA_BRAVE_NEW_EMPIRE
+		 prerequisite = { focus = FRA_CONSCRIPT_THE_MASSES }
+		 x = 0
+		 y = 1
+		 relative_position_id = FRA_CONSCRIPT_THE_MASSES
+		 cost = 10
+		 ai_will_do = {
+			 factor = 1
+		 }
+
+		 available_if_capitulated = yes
+		 search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		 completion_reward = {
+				 add_ideas = {
+					 Brave_New_Empire
+				 }
+			 }
+		 }
+
+
+
+	focus = {
+    id = FRA_GERMAN_ADVISORS
+    icon = GFX_focus_industry
+    text = FRA_GERMAN_ADVISORS
+    prerequisite = { focus = FRA_ARMEE_FRANCAISE }
+    mutually_exclusive = { focus = FRA_RUSSIAN_ADVISORS }
+    x = 4
+    y = 1
+    relative_position_id = FRA_ARMEE_FRANCAISE
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+          add_ideas = {
+            German_Advisors
+          }
+    }
+  }
+
+  focus = {
+    id = FRA_FOCUS_ON_FIREPOWER
+    icon = GFX_focus_industry
+    text = FOCUS_ON_FIREPOWER
+    prerequisite = { focus = FRA_GERMAN_ADVISORS }
+    mutually_exclusive = { focus = FRA_FOCUS_ON_SPEED }
+
+    x = -2
+    y = 1
+    relative_position_id = FRA_GERMAN_ADVISORS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_superior_firepower
+        }
+    }
+  }
+
+
+  focus = {
+    id = FRA_MAS_CONTRACTS
+    icon = GFX_focus_industry
+    text = FRA_MAS_CONTRACTS
+    prerequisite = { focus = FRA_FOCUS_ON_FIREPOWER }
+    x = 0
+    y = 1
+    relative_position_id = FRA_FOCUS_ON_FIREPOWER
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = artillery
+      }
+      add_tech_bonus {
+        bonus = 0.5
+        uses = 1
+        category = infantry_weapons
+      }
+      }
+    }
+
+  focus = {
+    id = FRA_MASTER_ARTILLERY
+    icon = GFX_focus_industry
+    text = FRA_MASTER_ARTILLERY
+    prerequisite = { focus = FRA_MAS_CONTRACTS }
+    x = 0
+    y = 1
+    relative_position_id = FRA_MAS_CONTRACTS
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Hellsfire
+      }
+     }
+  }
+
+
+    focus = {
+      id = FRA_FOCUS_ON_SPEED
+      icon = GFX_focus_industry
+      text = FOCUS_ON_SPEED
+      prerequisite = { focus = FRA_GERMAN_ADVISORS }
+      mutually_exclusive = { focus = FRA_FOCUS_ON_FIREPOWER }
+
+      x = 2
+      y = 1
+      relative_position_id = FRA_GERMAN_ADVISORS
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_mobile_warfare
+        }
+     }
+    }
+
+    focus = {
+      id = FRA_TANK_CORP
+      icon = GFX_focus_industry
+      text = FRA_TANK_CORP
+      prerequisite = { focus = FRA_FOCUS_ON_SPEED }
+      x = 0
+      y = 1
+      relative_position_id = FRA_FOCUS_ON_SPEED
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_tech_bonus {
+          bonus = 1
+          uses = 1
+          category = cat_light_armor
+        }
+        }
+      }
+
+    focus = {
+      id = FRA_MASTER_GUERRE_ECLAIR
+      icon = GFX_focus_industry
+      text = FRA_MASTER_GUERRE_ECLAIR
+      prerequisite = { focus = FRA_TANK_CORP }
+      x = 0
+      y = 1
+      relative_position_id = FRA_TANK_CORP
+      cost = 10
+      ai_will_do = {
+        factor = 1
+      }
+
+      available_if_capitulated = yes
+      search_filters = { FOCUS_FILTER_INDUSTRY }
+
+      completion_reward = {
+        add_ideas = {
+          Lightning_War
+        }
+       }
+    }
+
+  focus = {
+    id = FRA_REVITALIZE_ARMY
+    icon = GFX_focus_industry
+    text = FRA_REVITALIZE_ARMY
+    prerequisite = { focus = FRA_MASTER_ARTILLERY focus = FRA_MASTER_TACTICS focus = FRA_MASTER_GUERRE_ECLAIR focus = FRA_BRAVE_NEW_EMPIRE }
+    x = -2
+    y = 1
+    relative_position_id = FRA_MASTER_ARTILLERY
+    cost = 10
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+
+    completion_reward = {
+      add_ideas = {
+        Army_Future
+      }
+      army_experience = 50
+
+     }
+  }
+
+
+
+  #############Navy
+  focus = {
+    id = FRA_GRANDE_MARINE
+    icon = GFX_focus_industry
+    text = FRA_GRANDE_MARINE
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = FRA_ARMEE_FRANCAISE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = FRA_BUILD_DOCKYARDS
+    icon = GFX_focus_industry
+    text = FRA_BUILD_DOCKYARDS
+    prerequisite = { focus = FRA_GRANDE_MARINE }
+    x = 0
+    y = 1
+    relative_position_id = FRA_GRANDE_MARINE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      15 = {
+        add_building_construction = {
+            type = dockyard
+            level = 2
+            instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_TRUE_NAVY
+    icon = GFX_focus_industry
+    text = FRA_TRUE_NAVY
+    prerequisite = { focus = FRA_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = FRA_WOLF_PACKS }
+    mutually_exclusive = { focus = FRA_NAVAL_AVIATION }
+    x = -6
+    y = 1
+    relative_position_id = FRA_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_fleet_in_being
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_CAPITAL_SHIPS
+    icon = GFX_focus_industry
+    text = FRA_CAPITAL_SHIPS
+    prerequisite = { focus = FRA_TRUE_NAVY }
+    x = -2
+    y = 1
+    relative_position_id = FRA_TRUE_NAVY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = bb_tech
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_PROJECT_Z
+    icon = GFX_focus_industry
+    text = FRA_PROJECT_Z
+    prerequisite = { focus = FRA_TRUE_NAVY }
+    x = 2
+    y = 1
+    relative_position_id = FRA_TRUE_NAVY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = ca_tech
+      }
+    }
+  }
+
+
+
+  focus = {
+    id = FRA_WOLF_PACKS
+    icon = GFX_focus_industry
+    text = FRA_WOLF_PACKS
+    prerequisite = { focus = FRA_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = FRA_TRUE_NAVY }
+    mutually_exclusive = { focus = FRA_NAVAL_AVIATION }
+    x = 0
+    y = 1
+    relative_position_id = FRA_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_trade_interdiction
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_U_BOATS
+    icon = GFX_focus_industry
+    text = FRA_U_BOATS
+    prerequisite = { focus = FRA_WOLF_PACKS }
+    x = -2
+    y = 1
+    relative_position_id = FRA_WOLF_PACKS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = ss_tech
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_TRADE_WAR
+    icon = GFX_focus_industry
+    text = FRA_TRADE_WAR
+    prerequisite = { focus = FRA_WOLF_PACKS }
+    x = 2
+    y = 1
+    relative_position_id = FRA_WOLF_PACKS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = dd_tech
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_NAVAL_AVIATION
+    icon = GFX_focus_industry
+    text = FRA_NAVAL_AVIATION
+    prerequisite = { focus = FRA_BUILD_DOCKYARDS }
+    mutually_exclusive = { focus = FRA_WOLF_PACKS }
+    mutually_exclusive = { focus = FRA_TRUE_NAVY }
+    x = 6
+    y = 1
+    relative_position_id = FRA_BUILD_DOCKYARDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_base_strike
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_NAVY_FUTURE
+    icon = GFX_focus_industry
+    text = FRA_NAVY_FUTURE
+    prerequisite = { focus = FRA_NAVAL_AVIATION }
+    x = -2
+    y = 1
+    relative_position_id = FRA_NAVAL_AVIATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = naval_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_DEATH_FROM_ABOVE
+    icon = GFX_focus_industry
+    text = FRA_DEATH_FROM_ABOVE
+    prerequisite = { focus = FRA_NAVAL_AVIATION }
+    x = 2
+    y = 1
+    relative_position_id = FRA_NAVAL_AVIATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = cv_tech
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_AMPHIBIOUS_ASSAULT
+    icon = GFX_focus_industry
+    text = FRA_AMPHIBIOUS_ASSAULT
+    prerequisite = { focus = FRA_PROJECT_Z }
+    prerequisite = { focus = FRA_CAPITAL_SHIPS }
+    x = -2
+    y = 1
+    relative_position_id = FRA_PROJECT_Z
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = FRA_TRADE_DOMINATION
+    icon = GFX_focus_industry
+    text = FRA_TRADE_DOMINATION
+    prerequisite = { focus = FRA_U_BOATS }
+    prerequisite = { focus = FRA_TRADE_WAR }
+    x = 2
+    y = 1
+    relative_position_id = FRA_U_BOATS
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = FRA_SUPREMACY_OF_NAVAL_AIR
+    icon = GFX_focus_industry
+    text = FRA_SUPREMACY_OF_NAVAL_AIR
+    prerequisite = { focus = FRA_NAVY_FUTURE }
+    prerequisite = { focus = FRA_DEATH_FROM_ABOVE }
+    x = 2
+    y = 1
+    relative_position_id = FRA_NAVY_FUTURE
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      navy_experience = 15
+    }
+  }
+
+  focus = {
+    id = FRA_REFORMED_NAVY
+    icon = GFX_focus_industry
+    text = FRA_REFORMED_NAVY
+    prerequisite = { focus = FRA_AMPHIBIOUS_ASSAULT focus = FRA_TRADE_DOMINATION focus = FRA_SUPREMACY_OF_NAVAL_AIR }
+    x = 0
+    y = 1
+    relative_position_id = FRA_TRADE_DOMINATION
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+        Reformed_Navy
+      }
+    }
+  }
+
+
+  ############AF
+  focus = {
+    id = FRA_GRANDE_AIR
+    icon = GFX_focus_industry
+    text = FRA_GRANDE_AIR
+    #prerequisite = { focus = ITA_industrial_effort_2 }
+    x = 20
+    y = 0
+    relative_position_id = FRA_GRANDE_MARINE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 20
+    }
+  }
+
+
+  focus = {
+    id = FRA_BUILD_AIRFIELDS
+    icon = GFX_focus_industry
+    text = FRA_BUILD_FIELDS
+    prerequisite = { focus = FRA_GRANDE_AIR }
+    x = 0
+    y = 1
+    relative_position_id = FRA_GRANDE_AIR
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      24 = {
+        add_building_construction = {
+            type = air_base
+            level = 2
+            instant_build = yes
+        }
+        add_extra_state_shared_building_slots = 2
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_BURN_TO_GROUND
+    icon = GFX_focus_industry
+    text = FRA_BURN_TO_GROUND
+    prerequisite = { focus = FRA_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = FRA_AIRLAND_BATTLE }
+    mutually_exclusive = { focus = ALL_USE_PLANES }
+    x = -6
+    y = 1
+    relative_position_id = FRA_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_strategic_destruction
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_RAIN_OF_FIRE
+    icon = GFX_focus_industry
+    text = FRA_CAPITAL_SHIPS
+    prerequisite = { focus = FRA_BURN_TO_GROUND }
+    x = -2
+    y = 1
+    relative_position_id = FRA_BURN_TO_GROUND
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_strategic_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_RAIN_OF_DEATH
+    icon = GFX_focus_industry
+    text = FRA_RAIN_OF_DEATH
+    prerequisite = { focus = FRA_BURN_TO_GROUND }
+    x = 2
+    y = 1
+    relative_position_id = FRA_BURN_TO_GROUND
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = tactical_bomber
+      }
+    }
+  }
+
+
+
+  focus = {
+    id = FRA_AIRLAND_BATTLE
+    icon = GFX_focus_industry
+    text = FRA_AIRLAND_BATTLE
+    prerequisite = { focus = FRA_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = FRA_BURN_TO_GROUND }
+    mutually_exclusive = { focus = FRA_ALL_USE_PLANES }
+    x = 0
+    y = 1
+    relative_position_id = FRA_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_battlefield_support
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_STRAFING
+    icon = GFX_focus_industry
+    text = FRA_STRAFING
+    prerequisite = { focus = FRA_AIRLAND_BATTLE }
+    x = -2
+    y = 1
+    relative_position_id = FRA_AIRLAND_BATTLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = light_fighter
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_ACES
+    icon = GFX_focus_industry
+    text = FRA_ACES
+    prerequisite = { focus = FRA_AIRLAND_BATTLE }
+    x = 2
+    y = 1
+    relative_position_id = FRA_AIRLAND_BATTLE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus = {
+        bonus = 1
+        uses = 1
+        category = cas_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_ALL_USE_PLANES
+    icon = GFX_focus_industry
+    text = ALL_USE_PLANES
+    prerequisite = { focus = FRA_BUILD_AIRFIELDS }
+    mutually_exclusive = { focus = FRA_BURN_TO_GROUND }
+    mutually_exclusive = { focus = FRA_AIRLAND_BATTLE }
+    x = 6
+    y = 1
+    relative_position_id = FRA_BUILD_AIRFIELDS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cat_operational_integrity
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_BOMBERS
+    icon = GFX_focus_industry
+    text = FRA_BOMBERS
+    prerequisite = { focus = FRA_ALL_USE_PLANES }
+    x = -2
+    y = 1
+    relative_position_id = FRA_ALL_USE_PLANES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = tactical_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_ANTI_TROOP_BOMBS
+    icon = GFX_focus_industry
+    text = FRA_ANTI_TROOP_BOMBS
+    prerequisite = { focus = FRA_ALL_USE_PLANES }
+    x = 2
+    y = 1
+    relative_position_id = FRA_ALL_USE_PLANES
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_tech_bonus {
+        bonus = 1
+        uses = 1
+        category = cas_bomber
+      }
+    }
+  }
+
+  focus = {
+    id = FRA_RAIN_OF_ANNIHILATION
+    icon = GFX_focus_industry
+    text = FRA_RAIN_OF_ANNIHILATION
+    prerequisite = { focus = FRA_RAIN_OF_FIRE }
+    prerequisite = { focus = FRA_RAIN_OF_DEATH }
+    x = -2
+    y = 1
+    relative_position_id = FRA_RAIN_OF_DEATH
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = FRA_DOGFIGHTING
+    icon = GFX_focus_industry
+    text = FRA_DOGFIGHTING
+    prerequisite = { focus = FRA_STRAFING }
+    prerequisite = { focus = FRA_ACES }
+    x = 2
+    y = 1
+    relative_position_id = FRA_STRAFING
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = FRA_BOMBS_EVERYWHERE
+    icon = GFX_focus_industry
+    text =  FRA_BOMBS_EVERYWHERE
+    prerequisite = { focus = FRA_BOMBERS }
+    prerequisite = { focus = FRA_ANTI_TROOP_BOMBS }
+    x = 2
+    y = 1
+    relative_position_id = FRA_BOMBERS
+    cost = 1
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      air_experience = 15
+    }
+  }
+
+  focus = {
+    id = FRA_REFORMED_AIR_FORCE
+    icon = GFX_focus_industry
+    text = FRA_REFORMED_AIR_FORCE
+    prerequisite = { focus = FRA_BOMBS_EVERYWHERE focus = FRA_DOGFIGHTING focus = FRA_RAIN_OF_ANNIHILATION }
+    x = 0
+    y = 1
+    relative_position_id = FRA_DOGFIGHTING
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+        Reformed_Air_Force
+      }
+    }
+  }
+
+
+	###########
+
+
+	focus = {
+    id = FRA_SENATE_ELECTIONS
+    icon = GFX_focus_industry
+    text = FRA_SENATE_ELECTIONS
+    x = 18
+    y = 0
+    relative_position_id = FRA_BUILD_INDUSTRY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = 120
+    }
+  }
+
+
+	######Doctrinaire
+	focus = {
+    id = FRA_DOCTRINAIRE_VIC
+    icon = GFX_focus_industry
+    text = FRA_DOCTRINAIRE_VIC
+		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+    x = -6
+    y = 1
+    relative_position_id = FRA_SENATE_ELECTIONS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_DOCTRINAIRE_RIGHT
+    icon = GFX_focus_industry
+    text = FRA_DOCTRINAIRE_RIGHT
+		prerequisite = { focus = FRA_DOCTRINAIRE_VIC }
+    x = -2
+    y = 1
+    relative_position_id = FRA_DOCTRINAIRE_VIC
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_RESTORE_1852
+    icon = GFX_focus_industry
+    text = FRA_RESTORE_1852
+		prerequisite = { focus = FRA_DOCTRINAIRE_RIGHT }
+    x = 0
+    y = 1
+    relative_position_id = FRA_DOCTRINAIRE_RIGHT
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      remove_ideas = {
+				Constitution_of_1927
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_LE_EMPEROR
+    icon = GFX_focus_industry
+    text = FRA_LE_EMPEROR
+		prerequisite = { focus = FRA_RESTORE_1852 }
+    x = 0
+    y = 1
+    relative_position_id = FRA_RESTORE_1852
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_BONAPARTIST_ABSOLUTISM
+    icon = GFX_focus_industry
+    text = FRA_BONAPARTIST_ABSOLUTISM
+		prerequisite = { focus = FRA_LE_EMPEROR }
+    x = 0
+    y = 1
+    relative_position_id = FRA_LE_EMPEROR
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Bonapartist_Absolutism
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_DOCTRINAIRE_LEFT
+    icon = GFX_focus_industry
+    text = FRA_DOCTRINAIRE_LEFT
+		prerequisite = { focus = FRA_DOCTRINAIRE_VIC }
+    x = 2
+    y = 1
+    relative_position_id = FRA_DOCTRINAIRE_VIC
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_KEEP_1827
+    icon = GFX_focus_industry
+    text = FRA_KEEP_1827
+		prerequisite = { focus = FRA_DOCTRINAIRE_LEFT }
+    x = 0
+    y = 1
+    relative_position_id = FRA_DOCTRINAIRE_LEFT
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity {
+				ideology = democratic
+				popularity = 0.3
+			}
+
+			set_country_leader_ideology = conservative
+
+			set_politics = {
+				ruling_party = democratic
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_REX_REGNAT
+    icon = GFX_focus_industry
+    text = FRA_REX_REGNAT
+		prerequisite = { focus = FRA_KEEP_1827 }
+    x = 0
+    y = 1
+    relative_position_id = FRA_KEEP_1827
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Rex_Regnat
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_LAFAYETTE_DREAM
+    icon = GFX_focus_industry
+    text = FRA_LAFAYETTE_DREAM
+		prerequisite = { focus = FRA_REX_REGNAT }
+    x = 0
+    y = 1
+    relative_position_id = FRA_REX_REGNAT
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Lafayette_Dream
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_REPUBLICAN_VIC
+    icon = GFX_focus_industry
+    text = FRA_REPUBLICAN_VIC
+		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+    x = -2
+    y = 1
+    relative_position_id = FRA_SENATE_ELECTIONS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity {
+				ideology = democratic
+				popularity = 0.3
+			}
+
+			add_popularity {
+				ideology = neutrality
+				popularity = -0.4
+			}
+
+			set_politics = {
+				ruling_party = democratic
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_RIGHTS_OF_MAN
+    icon = GFX_focus_industry
+    text = FRA_RIGHTS_OF_MAN
+		prerequisite = { focus = FRA_ABOLISH_MONARCHY }
+		prerequisite = { focus = FRA_REPUBLICAN_VIC }
+    x = -1
+    y = 1
+    relative_position_id = FRA_ABOLISH_MONARCHY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Rights_of_Men
+			}
+			remove_ideas = {
+				Constitution_of_1927
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_VIVE_LA_REPUBLIC
+    icon = GFX_focus_industry
+    text = FRA_VIVE_LA_REPUBLIC
+		prerequisite = { focus = FRA_RIGHTS_OF_MAN }
+    x = 0
+    y = 1
+    relative_position_id = FRA_RIGHTS_OF_MAN
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Vive_la_Republic
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_LIBERTE
+    icon = GFX_focus_industry
+    text = FRA_LIBERTE
+		prerequisite = { focus = FRA_VIVE_LA_REPUBLIC }
+    x = 0
+    y = 1
+    relative_position_id = FRA_VIVE_LA_REPUBLIC
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Conte_Tyrannie
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_TRAVALIEUR_VIC
+    icon = GFX_focus_industry
+    text = FRA_TRAVALIEUR_VIC
+		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+    x = 2
+    y = 1
+    relative_position_id = FRA_SENATE_ELECTIONS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity {
+				ideology = communism
+				popularity = 0.15
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_ABOLISH_MONARCHY
+    icon = GFX_focus_industry
+    text = FRA_ABOLISH_MONARCHY
+		prerequisite = { focus = FRA_TRAVALIEUR_VIC focus = FRA_REPUBLICAN_VIC }
+    x = 0
+    y = 2
+    relative_position_id = FRA_SENATE_ELECTIONS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity {
+				ideology = neutrality
+				popularity = -0.4
+			}
+			kill_ideology_leader = neutrality
+    }
+  }
+
+	focus = {
+    id = FRA_TWO_ADDITIONS
+    icon = GFX_focus_industry
+    text = FRA_TWO_ADDITIONS
+		prerequisite = { focus = FRA_ABOLISH_MONARCHY }
+		prerequisite = { focus = FRA_TRAVALIEUR_VIC }
+    x = 1
+    y = 1
+    relative_position_id = FRA_ABOLISH_MONARCHY
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				New_Rights_of_Men
+			}
+			remove_ideas = {
+				Constitution_of_1927
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_VIVE_LA_COMMUNE
+    icon = GFX_focus_industry
+    text = FRA_VIVE_LA_COMMUNE
+		prerequisite = { focus = FRA_TWO_ADDITIONS }
+    x = 0
+    y = 1
+    relative_position_id = FRA_TWO_ADDITIONS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Vive_la_Commune
+			}
+			add_popularity {
+				ideology = communism
+				popularity = 0.25
+			}
+			set_politics {
+				ruling_party = communism
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_EGALITE
+    icon = GFX_focus_industry
+    text = FRA_EGALITE
+		prerequisite = { focus = FRA_VIVE_LA_COMMUNE }
+    x = 0
+    y = 1
+    relative_position_id = FRA_VIVE_LA_COMMUNE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				True_Equality
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_FASCIST_VIC
+    icon = GFX_focus_industry
+    text = FRA_FASCIST_VIC
+		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+    x = 5
+    y = 1
+    relative_position_id = FRA_SENATE_ELECTIONS
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_popularity {
+				ideology = fascism
+				popularity = 0.2
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_CAGOULE_CABINET
+    icon = GFX_focus_industry
+    text = FRA_CAGOULE_CABINET
+		prerequisite = { focus = FRA_FASCIST_VIC }
+    x = 0
+    y = 1
+    relative_position_id = FRA_FASCIST_VIC
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			add_popularity {
+				ideology = fascism
+				popularity = 0.2
+			}
+			add_political_power = 75
+    }
+  }
+
+	focus = {
+    id = FRA_END_CONSTITUTIONALISM
+    icon = GFX_focus_industry
+    text = FRA_END_CONSTITUTIONALISM
+		prerequisite = { focus = FRA_CAGOULE_CABINET }
+    x = 0
+    y = 1
+    relative_position_id = FRA_CAGOULE_CABINET
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Napoleon_6
+				National_Syndicalism
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_VIVE_LE_FRANCE
+    icon = GFX_focus_industry
+    text = FRA_VIVE_LE_FRANCE
+		prerequisite = { focus = FRA_END_CONSTITUTIONALISM }
+    x = 0
+    y = 1
+    relative_position_id = FRA_END_CONSTITUTIONALISM
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+		completion_reward = {
+      add_political_power = 150
+			add_war_support = 0.15
+    }
+  }
+
+
+	focus = {
+    id = FRA_GARDE_DE_FRATIRNITE
+    icon = GFX_focus_industry
+    text = FRA_GARDE_DE_FRATIRNITE
+		prerequisite = { focus = FRA_VIVE_LE_FRANCE }
+    x = 0
+    y = 1
+    relative_position_id = FRA_VIVE_LE_FRANCE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_ideas = {
+				Secret_Police
+			}
+    }
+  }
+
+	######Doctrinaire
+	focus = {
+    id = FRA_JOIN_ENTENTE
+    icon = GFX_focus_industry
+    text = FRA_JOIN_ENTENTE
+		prerequisite = { focus = FRA_BONAPARTIST_ABSOLUTISM focus = FRA_LAFAYETTE_DREAM focus = FRA_LIBERTE }
+		mutually_exclusive = {focus = FRA_JOIN_ENTENTE_CORDIALE }
+    x = 2
+    y = 1
+    relative_position_id = FRA_BONAPARTIST_ABSOLUTISM
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			create_faction = Entente
+			add_to_faction = SOV
+			add_to_faction = FOB
+			add_to_faction = FRA
+			add_to_faction = FGD
+    }
+  }
+
+	focus = {
+    id = FRA_JOIN_ENTENTE_CORDIALE
+    icon = GFX_focus_industry
+    text = FRA_JOIN_ENTENTE_CORDIALE
+		prerequisite = { focus = FRA_BONAPARTIST_ABSOLUTISM focus = FRA_LAFAYETTE_DREAM focus = FRA_LIBERTE }
+		mutually_exclusive = {focus = FRA_JOIN_ENTENTE}
+    x = 6
+    y = 1
+    relative_position_id = FRA_BONAPARTIST_ABSOLUTISM
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			create_faction = Entente
+			add_to_faction = SOV
+			add_to_faction = FOB
+			add_to_faction = FRA
+			add_to_faction = FGD
+			add_to_faction = ENG
+    }
+  }
+
+	focus = {
+    id = FRA_JOIN_GERMAN_ROME
+    icon = GFX_focus_industry
+    text = FRA_JOIN_GERMAN_ROME
+		prerequisite = { focus = FRA_GARDE_DE_FRATIRNITE }
+    x = 0
+    y = 1
+    relative_position_id = FRA_GARDE_DE_FRATIRNITE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			ITA = {
+				add_to_faction = FRA
+			}
+    }
+  }
+
+	focus = {
+    id = FRA_JOIN_INTERNATIONALE
+    icon = GFX_focus_industry
+    text = FRA_JOIN_INTERNATIONALE
+		prerequisite = { focus = FRA_EGALITE }
+    x = 0
+    y = 1
+    relative_position_id = FRA_EGALITE
+    cost = 5
+    ai_will_do = {
+      factor = 1
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			create_faction = Internationale
+			add_to_faction = FRA
+    }
+  }
+
+}
