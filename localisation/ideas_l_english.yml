@@ -2647,6 +2647,9 @@
  Absolutism:0 "Absolutism"
  Absolutism_desc:0 "Kaiser Otto is a grand leader but his absolute rule has created many enemies in the state."
 
+ Absolutism_2:0 "Absolutism"
+ Absolutism_2_desc:0 "Kaiser Otto is a grand leader but his absolute rule has created many enemies in the state."
+
  Bohemian_Outrage:0 "Bohemian Outrage"
  Bohemian_Outrage_desc:0 "In 1934, our divine emperor Karl I von Habsburg shuttered the Bohemian Diet. Bohemians are in an uproar, but it’s probably nothing - right?"
 
@@ -2657,7 +2660,17 @@
  Nemetzi_dal_desc:0 "Young Italy was originally a republican resistance movement in Italy. However, after our recapture of Lombardy in 1868, it gained popularity and became a powerful anarchist group, assassinating Empress Elizabeth (Sisi) in 1898, and pro-Young Italy strikes have been crippling our economy."
 
  Nicholas_the_2nd:0 "Tsar Nikolai the 2nd"
- Nicholas_the_2nd:0 "The Tsar lost most of his power in the 1905 revolution and is mostly resigned to it. While this liberalism is popular with the people the conservative army is not very happy with it."
+ Nicholas_the_2nd_desc:0 "The Tsar lost most of his power in the 1905 revolution and is mostly resigned to it. While this liberalism is popular with the people the conservative army is not very happy with it."
+
+ Nicholas_the_2nd_2:0 "Tsar Nikolai the 2nd"
+ Nicholas_the_2nd_2_desc:0 "The Tsar lost most of his power in the 1905 revolution and is mostly resigned to it. While this liberalism is popular with the people the conservative army is not very happy with it."
+
+ Nicholas_the_2nd_3:0 "Tsar Nikolai the 2nd"
+ Nicholas_the_2nd_3_desc:0 "The Tsar lost most of his power in the 1905 revolution and is mostly resigned to it. While this liberalism is popular with the people the conservative army is not very happy with it."
+
+
+ Nicholas_the_2nd_4:0 "Tsar Nikolai the 2nd"
+ Nicholas_the_2nd_4_desc:0 "The Tsar lost most of his power in the 1905 revolution and is mostly resigned to it. While this liberalism is popular with the people the conservative army is not very happy with it."
 
  Legacy_of_1905:0 "Legacy of 1905"
  Legacy_of_1905_desc:0 "Democracy is highly popular and the current government enjoys widespread support, however worker support is largely contingent on pro-labour economic policies."
@@ -2794,4 +2807,120 @@
 
  Napoleon_6:0 "Napoleon the 6th"
 
+ Karl_1:0 "Karl the 1st"
+
  Secret_Police:0 "Secret Police"
+
+ Kasier_Und_Reich:0 "Fur Kaiser Und Reich"
+
+ Chaos_Vienna:0 "Chaos in Vienna"
+ Chaos_Moscow:0 "Chaos in Moscow"
+
+ Gleichschalstung:0 "Gleichschalstung"
+
+ Gleichschalstung_2:0 "Gleichschalstung"
+
+ Rule_of_Vozdh:0 "Rule of Vozdh"
+
+ Path_of_Agression:0 "Path of Agression"
+
+ Legacy_of_1905_2:0 "Legacy of 1905"
+ Legacy_of_1905_2_desc:0 "Democracy is highly popular and the current government enjoys widespread support, however worker support is largely contingent on pro-labour economic policies."
+
+ Legacy_of_1905_3:0 "Legacy of 1905"
+ Legacy_of_1905_3_desc:0 "Democracy is highly popular and the current government enjoys widespread support, however worker support is largely contingent on pro-labour economic policies."
+
+ Proliteriat:0 "Proliteriat"
+
+ Peace_in_Time:0 "Peace in Time"
+
+ Devolution:0 "Devolution"
+
+ Industrializing_early:0 "Industrializing"
+
+ Industrializing_2:0 "Industrializing"
+
+ Industrializing_3:0 "Industrializing"
+
+ Prague_Massacre:0 "Prague Massacre"
+
+ Sixty_Days_Milan:0 "Sixty Days Milan"
+
+ Constitutional_Crisis:0 "Constitutional Crisis"
+ Constitutional_Crisis_desc:0 "Denmark is at a crossroads; The King and his supporters are clamoring for more power, while the government wants to stick by Denmark's Constitution."
+
+ Swedish_Occupation:0 "Swedish Occupation"
+ Swedish_Occupation_desc:0 "After the Danish-Sweden War of 1876, the Danish occupied the important cities of Malmo and Stockholm, crippling the Swedes. They are not happy about this..."
+
+ Swedish_Occupation_2:0 "Swedish Occupation"
+ Swedish_Occupation_2_desc:0 "After the Danish-Sweden War of 1876, the Danish occupied the important cities of Malmo and Stockholm, crippling the Swedes. They are not happy about this..."
+
+ Capitalism:0 "Capitalism"
+
+ Capitalism_2:0 "Capitalism"
+
+ Centralism:0 "Centralism"
+
+ Federalism:0 "Federalism"
+
+ Autonomism:0 "Autonomism"
+
+ Autonomism_2:0 "Autonomism"
+
+ Autonomism_3:0 "Autonomism"
+
+ TUR_DIRECTION:0 "Direction of the Empire"
+
+ TUR_REACTION:0 "The Ottoman Reaction"
+
+ TUR_REACTION_2:0 "The Ottoman Reaction"
+
+ TUR_ARAB_AUTONOMY:0 "Arab Autonomy"
+
+ TUR_ARAB_AUTONOMY_2:0 "Arab Autonomy"
+
+ TUR_UNITED_EMPIRE:0 "A United Empire"
+
+ TUR_MILITARY_GOVERNMENT:0 "Military Government"
+
+ TUR_SIX_ARROWS:0 "The Six Arrows"
+
+ TUR_CALIPHATE:0 "The New Caliphate"
+
+ TUR_ABSOLUTISM:0 "Turkish Absolutism"
+
+ TUR_BARRACKS_MUTINY:0 "Mutiny in the Barracks"
+
+ TUR_ISLAMIC_SOCIALISM:0 "Islamic Socialism"
+
+ TUR_NATIONALISM:0 "Turkish Nationalism"
+
+ sov_agrarianism:0 "Russian Agrarianism"
+
+ feudalism:0 "Feudalism"
+
+ feudalism_2:0 "Feudalism"
+
+ feudalism_3:0 "Feudalism"
+
+ feudalism_4:0 "Feudalism"
+
+ narodnik_eco:0 "Narondik Economy"
+
+ narodnik_eco_2:0 "Narondik Economy"
+
+ narodnik_eco_3:0 "Narondik Economy"
+
+ narodnik_eco_4:0 "Narondik Economy"
+
+ Industrializing:0 "Industrializing Economy"
+
+ Industrializing_2:0 "Industrializing Economy"
+
+ Industrializing_3:0 "Industrializing Economy"
+
+ Colonization:0 "Colonization"
+
+ SOVIETIZATION:0 "Sovietization"
+
+ SOVIETIZATION_2:0 "Sovietization"

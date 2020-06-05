@@ -2394,3 +2394,111 @@
 
  AUS_WOLF_PACKS:0 "Wolf Packs"
  AUS_WOLF_PACKS_desc:0 "Our navy exists not to fight heavy battles, but to cripple the enemy's economy, so we will make packs of submarines to hunt their prey"
+
+  PAP_DEATH:0 "Death of the Pope"
+  PAP_DEATH_desc:0 "The illustrious Pope Pius XI has died."
+
+  PAP_CONCLAVE:0 "Call the Conclave"
+  PAP_CONCLAVE_desc:0 "We need to call the Papal Conclave to pick a new Pope."
+
+  PAP_CONSERVATIVE:0 "A Conservative Pope"
+  PAP_CONSERVATIVE_desc:0 "In the name of God, the conservative cardinal Eugenio Pacelli was elected."
+
+  PAP_PDF:0 "Pietas, Dignitas, Familias"
+  PAP_PDF_desc:0 "Piety, Dignity, and Familias will be the cardinal rules of the church."
+
+  PAP_AGAINST_COMMUNISM:0 "Decree against communism"
+  PAP_AGAINST_COMMUNISM_desc:0 "Communism is abhorrent and incompatible with Catholicism, Catholic communists must choose between faith and ideology."
+
+  PAP_NEUTRAL:0 "Papal Neutrality"
+  PAP_NEUTRAL_desc:0 "The Papacy is neutral ground for all sincere Catholics, we won’t get dragged into European war god willing."
+
+  PAP_CRUSADE_COMMUNISM:0 "Crusade against Communism"
+  PAP_CRUSADE_COMMUNISM_desc:0 "We must destroy, root and branch, the red menace!"
+
+  PAP_CRUSADE_DEMOCRACY:0 "Crusade against Democracy"
+  PAP_CRUSADE_DEMOCRACY_desc:0 "Democrats are a danger to the supremacy of the lord, they must be purged."
+
+  PAP_CRUSADE_FASCISM:0 "Crusade against Fascism"
+  PAP_CRUSADE_FASCISM_desc:0 "Fascist Nationalism must be rejected, the only sovereign is God on high!"
+
+  PAP_INQUISITION:0 "A New Inquisition"
+  PAP_INQUISITION_desc:0 "We will root out the enemies of God and burn them at the stake."
+
+  PAP_SUPREMACY:0 "Papal Supremacy"
+  PAP_SUPREMACY_desc:0 "The Pope is the divinely ordained head of the church and Rome and should be obeyed without objection."
+
+  PAP_DIVINE_GLORY:0 "Divine Glory"
+  PAP_DIVINE_GLORY_desc:0 "Glory to God, in the Highest glory."
+
+  PAP_CRUSADE:0 "Crusade!"
+  PAP_CRUSADE_desc:0 "Eternal war against the atheists and infidels, glory to God!"
+
+  PAP_TENTH_CRUSADE:0 "The Tenth Crusade"
+  PAP_TENTH_CRUSADE_desc:0 "We will take Jerusalem!"
+
+  PAP_OUTREMER:0 "Reform Outremer"
+  PAP_OUTREMER_desc:0 "With the Reconquest of the Holy Land, the old states of Outremer are to be reformed."
+
+  PAP_HEARTLAND:0 "Reach the Heartland"
+  PAP_HEARTLAND_desc:0 "We must seize the last of Arabia, the place from which the infidel Saracen emerged."
+
+  PAP_REFORM_ORDER:0 "Reform the Orders"
+  PAP_REFORM_ORDER_desc:0 "Reforming the Knights Templar and Hospitaller will make our army a grand one, blessed by God."
+
+  PAP_LIBERAL:0 "A Liberal Pope"
+  PAP_LIBERAL_desc:0 "In the name of God, the liberal cardinal Elia della Costa was elected."
+
+  PAP_CARITAS:0 "Caritas"
+  PAP_CARITAS_desc:0 "Charity will be the foundation of our rule."
+
+  PAP_WELFARE:0 "Christian Welfare"
+  PAP_WELFARE_desc:0 "We should live in accordance with the justice and charity of Jesus Christ."
+
+  PAP_TEMPORAL_DEMOCRACY:0 "Temporal Democracy"
+  PAP_TEMPORAL_DEMOCRACY_desc:0 "While the Pope holds spiritual authority, it is best to devolve rule of Rome itself to the people."
+
+  PAP_POPULAR_SOVEREIGNTY:0 "Popular Sovereignty"
+  PAP_POPULAR_SOVEREIGNTY_desc:0 "Render unto the people what is the people’s and render unto the Pope what is God’s."
+
+  PAP_LPC:0 "Libertas, Pietas, Caritas"
+  PAP_LPC_desc:0 "The three principles of Christian Democracy."
+
+  PAP_DOWN_FASCISTS:0 "Down with the Fascists!"
+  PAP_DOWN_FASCISTS_desc:0 "We can never rest while the oppressive nationalists surround us, we will get French support, down with the fascists!"
+
+  PAP_RIOT:0 "Rioting"
+  PAP_RIOT_desc:0 "The cardinals shall rule us no longer, for our freedom!"
+
+  PAP_2ND_REPUBLIC:0 "Declare the Second Republic"
+  PAP_2ND_REPUBLIC_desc:0 "Glory to Rome, glory to the Republic!"
+
+  PAP_SOCII:0 "Offer to the Socii"
+  PAP_SOCII_desc:0 "The Italians were the primary allies of the Republic till near its demise, and Mussolini is a committed Pan-Roman. Perhaps he can be persuaded that democracy is the way forward for Rome."
+
+  PAP_IBERIA:0 "Iberian Campaign"
+  PAP_IBERIA_desc:0 "We must reconquer Iberia."
+
+  PAP_BALKANS:0 "Balkan Campaign"
+  PAP_BALKANS_desc:0 "The Illyrian tribes must be shown the glory of our civilization, or the might of our legions."
+
+  PAP_GALLIC:0 "Gallic Wars"
+  PAP_GALLIC_desc:0 "We will take Gaul with democracy, repudiating the stains of Caesar."
+
+  PAP_SALT_EARTH:0 "Salt the Earth"
+  PAP_SALT_EARTH_desc:0 "We must destroy Carthage lest it ever rise again."
+
+  PAP_PERSIA:0 "Persian Wars"
+  PAP_PERSIA_desc:0 "We will finally destroy our age-old foe to the East."
+
+  PAP_MACEDONIA:0 "Macedonian Wars"
+  PAP_MACEDONIA_desc:0 "Greece is Roman and will forever be."
+
+  PAP_MITHRADATIC:0 "Mithridatic Wars"
+  PAP_MITHRADATIC_desc:0 "Destroying the heirs to Pontus is imperative to secure control over the East."
+
+  PAP_TEUTOBURG:0 "Avenge Teutoburg"
+  PAP_TEUTOBURG_desc:0 "We will destroy the German tribes that destroyed us."
+
+  PAP_AVA_ROMA:0 "Ave Roma! Ave Rei Publicae!"
+  PAP_AVA_ROMA_desc:0 "Long live Rome, Long live the Republic!"

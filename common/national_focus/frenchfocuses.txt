@@ -1639,6 +1639,9 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_DOCTRINAIRE_VIC
 		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+		mutually_exclusive = { focus = FRA_REPUBLICAN_VIC }
+		mutually_exclusive = { focus = FRA_TRAVALIEUR_VIC }
+		mutually_exclusive = { focus = FRA_FASCIST_VIC }
     x = -6
     y = 1
     relative_position_id = FRA_SENATE_ELECTIONS
@@ -1667,6 +1670,7 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_DOCTRINAIRE_RIGHT
 		prerequisite = { focus = FRA_DOCTRINAIRE_VIC }
+		mutually_exclusive = {focus = FRA_DOCTRINAIRE_LEFT}
     x = -2
     y = 1
     relative_position_id = FRA_DOCTRINAIRE_VIC
@@ -1761,6 +1765,7 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_DOCTRINAIRE_LEFT
 		prerequisite = { focus = FRA_DOCTRINAIRE_VIC }
+		mutually_exclusive = {focus = FRA_DOCTRINAIRE_RIGHT}
     x = 2
     y = 1
     relative_position_id = FRA_DOCTRINAIRE_VIC
@@ -1865,6 +1870,7 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_REPUBLICAN_VIC
 		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+		mutually_exclusive = { focus = FRA_DOCTRINAIRE_VIC focus = FRA_TRAVALIEUR_VIC focus = FRA_FASCIST_VIC }
     x = -2
     y = 1
     relative_position_id = FRA_SENATE_ELECTIONS
@@ -1971,6 +1977,7 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_TRAVALIEUR_VIC
 		prerequisite = { focus = FRA_SENATE_ELECTIONS }
+		mutually_exclusive = { focus = FRA_DOCTRINAIRE_VIC focus = FRA_REPUBLICAN_VIC focus = FRA_FASCIST_VIC }
     x = 2
     y = 1
     relative_position_id = FRA_SENATE_ELECTIONS
@@ -2100,7 +2107,8 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_FASCIST_VIC
 		prerequisite = { focus = FRA_SENATE_ELECTIONS }
-    x = 5
+		mutually_exclusive = { focus = FRA_DOCTRINAIRE_VIC focus = FRA_REPUBLICAN_VIC focus = FRA_TRAVALIEUR_VIC }
+    x = 7
     y = 1
     relative_position_id = FRA_SENATE_ELECTIONS
     cost = 5
@@ -2216,7 +2224,7 @@ focus_tree = {
     icon = GFX_focus_industry
     text = FRA_JOIN_ENTENTE
 		prerequisite = { focus = FRA_BONAPARTIST_ABSOLUTISM focus = FRA_LAFAYETTE_DREAM focus = FRA_LIBERTE }
-		mutually_exclusive = {focus = FRA_JOIN_ENTENTE_CORDIALE }
+		mutually_exclusive = { FRA_JOIN_ENTENTE_CORDIALE }
     x = 2
     y = 1
     relative_position_id = FRA_BONAPARTIST_ABSOLUTISM
@@ -2295,6 +2303,10 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = FRA_EGALITE
+
+		mutually_exclusive = { focus = FRA_PATH_OF_AGGRESSION }
+		mutually_exclusive = { focus = FRA_JOIN_GERMAN_ROME }
+
     cost = 5
     ai_will_do = {
       factor = 1
@@ -2308,5 +2320,405 @@ focus_tree = {
 			add_to_faction = FRA
     }
   }
+
+
+
+	focus = {
+		id = FRA_PATH_OF_AGGRESSION
+		icon = GFX_focus_industry
+		text = FRA_PATH_OF_AGGRESSION
+		prerequisite = { focus = FRA_EGALITE focus = FRA_GARDE_DE_FRATIRNITE }
+
+		mutually_exclusive = { focus = FRA_JOIN_INTERNATIONALE }
+		mutually_exclusive = { focus = FRA_JOIN_GERMAN_ROME }
+
+		x = 3
+		y = 0
+		relative_position_id = FRA_JOIN_INTERNATIONALE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_ideas = {
+				Path_of_Agression
+			}
+			news_event = { id = austria.667 hours = 4 }
+		}
+	}
+
+	focus = {
+		id = FRA_INVADE_BENELUX
+		icon = GFX_focus_industry
+		text = FRA_INVADE_BENELUX
+		prerequisite = { focus = FRA_PATH_OF_AGGRESSION }
+		x = 0
+		y = 1
+		relative_position_id = FRA_PATH_OF_AGGRESSION
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {target = LUX type = annex_everything}
+			create_wargoal = {target = HOL type = annex_everything}
+			create_wargoal = {target = BEL type = annex_everything}
+		}
+	}
+
+	focus = {
+		id = FRA_RHINE_CRACKDOWN
+		icon = GFX_focus_industry
+		text = FRA_RHINE_CRACKDOWN
+		prerequisite = { focus = FRA_INVADE_BENELUX }
+		x = -1
+		y = 1
+		relative_position_id = FRA_INVADE_BENELUX
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+				FGD = { country_event = france.200 days = 3 }
+				}
+		}
+
+	focus = {
+		id = FRA_ANNEX_RHINE
+		icon = GFX_focus_industry
+		text = FRA_ANNEX_RHINE
+		prerequisite = { focus = FRA_INVADE_BENELUX }
+		x = 1
+		y = 1
+		relative_position_id = FRA_INVADE_BENELUX
+		cost = 5
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+				release = FGD
+				declare_war_on = {
+					target = FGD
+					type = annex_everything
+				}
+				}
+		}
+
+
+
+	focus = {
+		id = FRA_FINISH_OFF_THE_GERMANS
+		icon = GFX_focus_industry
+		text = FRA_FINISH_OFF_THE_GERMANS
+		prerequisite = {
+				focus = FRA_ANNEX_RHINE
+				focus = FRA_RHINE_CRACKDOWN
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_ANNEX_RHINE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_BLITZ_THE_ISLAND
+		icon = GFX_focus_industry
+		text = FRA_BLITZ_THE_ISLAND
+		prerequisite = {
+			focus = FRA_FINISH_OFF_THE_GERMANS
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_FINISH_OFF_THE_GERMANS
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ENG
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_TAME_THE_BEAR
+		icon = GFX_focus_industry
+		text = FRA_TAME_THE_BEAR
+		prerequisite = {
+			focus = FRA_FINISH_OFF_THE_GERMANS
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_FINISH_OFF_THE_GERMANS
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_FINISH_THE_TURKS
+		icon = GFX_focus_industry
+		text = FRA_FINISH_THE_TURKS
+		prerequisite = {
+			focus = FRA_TAME_THE_BEAR
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_TAME_THE_BEAR
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_STRIKE_THE_AUSTRIANS
+		icon = GFX_focus_industry
+		text = FRA_STRIKE_THE_AUSTRIANS
+		prerequisite = {
+			focus = FRA_BLITZ_THE_ISLAND
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_BLITZ_THE_ISLAND
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_SUPERPOWER
+		icon = GFX_focus_industry
+		text = FRA_SUPERPOWER
+		prerequisite = { focus = FRA_STRIKE_THE_AUSTRIANS }
+		prerequisite = { focus = FRA_FINISH_THE_TURKS }
+
+		x = -1
+		y = 1
+		relative_position_id = FRA_STRIKE_THE_AUSTRIANS
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = FRA_KEEP_PEACE
+		icon = GFX_focus_industry
+		text = FRA_KEEP_PEACE
+
+		prerequisite = { focus = FRA_JOIN_ENTENTE focus = FRA_JOIN_ENTENTE_CORDIALE}
+
+		x = 2
+		y = 1
+		relative_position_id = FRA_JOIN_ENTENTE
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			give_guarantee = ROM
+			give_guarantee = BUL
+			give_guarantee = YUG
+			give_guarantee = POL
+			give_guarantee = GRE
+			give_guarantee = ALB
+		}
+	}
+
+	focus = {
+		id = FRA_INVITE_BALKANS
+		icon = GFX_focus_industry
+		text = FRA_INVITE_BALKANS
+		prerequisite = { focus = FRA_KEEP_PEACE }
+		x = -2
+		y = 1
+		relative_position_id = FRA_KEEP_PEACE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			YUG = {country_event = france.17 days = 5}
+			BUL = {country_event = france.17 days = 5}
+			ROM = {country_event = france.17 days = 5}
+			GRE = {country_event = france.17 days = 5}
+			ALB = {country_event = france.17 days = 5}
+		}
+	}
+
+	focus = {
+		id = FRA_INVITE_SCANDANAVIA
+		icon = GFX_focus_industry
+		text = FRA_INVITE_SCANDANAVIA
+		prerequisite = { focus = FRA_KEEP_PEACE }
+		x = 2
+		y = 0
+		relative_position_id = FRA_INVITE_BALKANS
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			NOR = {country_event = france.17 days = 5}
+			SWE = {country_event = france.17 days = 5}
+			DEN = {country_event = france.17 days = 5}
+		}
+	}
+
+	focus = {
+		id = FRA_INVITE_BENELUX
+		icon = GFX_focus_industry
+		text = FRA_INVITE_BENELUX
+		prerequisite = { focus = FRA_KEEP_PEACE }
+		x = 2
+		y = 0
+		relative_position_id = FRA_INVITE_SCANDANAVIA
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			BEL = {country_event = france.17 days = 5}
+			HOL = {country_event = france.17 days = 5}
+			LUX = {country_event = france.17 days = 5}
+		}
+	}
+
+	focus = {
+		id = FRA_PREVENT_EXPANSIONISM
+		icon = GFX_focus_industry
+		text = FRA_PREVENT_EXPANSIONISM
+		prerequisite = { focus = FRA_INVITE_BENELUX }
+		prerequisite = { focus = FRA_INVITE_BALKANS }
+		prerequisite = { focus = FRA_INVITE_SCANDANAVIA}
+		x = -2
+		y = 1
+		relative_position_id = FRA_INVITE_BENELUX
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			set_faction_name = "Pax Europa"
+		}
+	}
+
+	focus = {
+		id = FRA_PEACE_IN_TIME
+		icon = GFX_focus_industry
+		text = FRA_PEACE_IN_TIME
+		prerequisite = { focus = FRA_PREVENT_EXPANSIONISM }
+		x = 0
+		y = 1
+		relative_position_id = FRA_PREVENT_EXPANSIONISM
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = -0.1
+		}
+	}
 
 }

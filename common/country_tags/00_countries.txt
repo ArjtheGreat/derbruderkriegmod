@@ -208,3 +208,5 @@ AUS	= "countries/Austria.txt"
 GPU	= "countries/GermanPuppet.txt"
 FGD	= "countries/FrenchGermany.txt"
 FOB	= "countries/BalticFederation.txt"
+
+PAP = "countries/PapalStates.txt"

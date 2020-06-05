@@ -1,4 +1,4 @@
-capital = 2
+capital = 162
 
 oob = "ITA_1936"
 
@@ -7,7 +7,7 @@ add_to_faction = "GER"
 add_to_faction = "ITA"
 
 
-set_research_slots = 4
+set_research_slots = 3
 set_stability = 0.6
 set_war_support = 0.7
 add_ideas = {

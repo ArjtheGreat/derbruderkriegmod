@@ -1,0 +1,24 @@
+add_namespace = tur_sultan_fate
+
+# turkey
+country_event = {
+	id = tur_sultan_fate.1
+	title = tur_sultan_fate.1.t
+	desc = tur_sultan_fate.1.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+	ai_chance = {
+	base = 1
+	}
+		name = tur_sultan_fate.1.a
+		}
+		option = {
+	ai_chance = {
+	base = 1
+	}
+		name = tur_sultan_fate.1.b
+		}
+		}

@@ -1,0 +1,55 @@
+add_namespace = PAP
+
+# PAPAL
+
+#conclave event
+country_event = {
+	id = PAP_CONCLAVE.1
+	title = PAP_CONCLAVE.1.t
+	desc = PAP_CONCLAVE.1.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+	ai_chance = {
+	base = 1
+	}
+		name = PAP_CONCLAVE.1.a
+		complete_national_focus = PAP_CONSERVATIVE
+		}
+		option = {
+	ai_chance = {
+	base = 1
+	}
+		name = PAP_CONCLAVE.1.b
+		complete_national_focus = PAP_LIBERAL
+		}
+		option = {
+	ai_chance = {
+	base = 1
+	}
+		name = PAP_CONCLAVE.1.c
+		complete_national_focus = PAP_RIOT
+		}
+		}
+	
+#this one starts the tree	
+country_event = {
+	id = PAP_CONCLAVE.2
+	title = PAP_CONCLAVE.2.t
+	desc = PAP_CONCLAVE.2.d
+	picture = GFX_report_event_german_speech
+	mean_time_to_happen = { days = 1 }
+	
+	is_triggered_only = no
+	fire_only_once = yes
+	
+	option = {
+	ai_chance = {
+	base = 1
+	}
+		name = PAP_CONCLAVE.2.a
+		complete_national_focus = PAP_DEATH
+		}
+		}

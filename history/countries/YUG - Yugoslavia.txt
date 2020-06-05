@@ -187,16 +187,17 @@ if = {
 
 set_convoys = 10
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = absolutism
 	last_election = "1935.5.3"
 	election_frequency = 36
-	elections_allowed = yes
+	elections_allowed = no
 }
 set_popularities = {
-	democratic = 15
-	fascism = 10
-	communism = 15
-	neutrality = 60
+	democratic = 4
+	fascism = 3
+	communism = 5
+	neutrality = 21
+	absolutism = 67
 }
 
 1939.1.1 = {
@@ -216,9 +217,9 @@ set_popularities = {
 set_stability = 0.6
 
 create_country_leader = {
-	name = "Prince Paul"
+	name = "Alexander the 1st"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
+	picture = "gfx/leaders/Alexander_I.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {

@@ -16,23 +16,23 @@ bookmarks = {
 				Nemetzi_dal
 			}
 			focuses = {
-				FRA_form_the_popular_front
-				FRA_revive_the_national_bloc
-				FRA_france_leads
+				GROSS_KAISERWERKE
+				AUS_KAISER_SPEECH
+				AUS_STATE_OF_EMPIRE
 			}
 		}
 		"FRA"={
 			history = "FRENCH_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = neutrality
 			ideas = {
 				Constitution_of_1927
 				Bonapartist_Ambition
 				Haven_of_Refugees
 			}
 			focuses = {
-				USA_war_plan_black
-				USA_limited_intervention
-				USA_reestablish_the_gold_standard
+				FRA_POUR_LE_EMPEROR
+				FRA_SENATE_ELECTIONS
+				FRA_JOIN_ENTENTE_CORDIALE
 			}
 		}
 		"SOV"={
@@ -44,9 +44,9 @@ bookmarks = {
 				Agrarian-Industrial_Divide
 			}
 			focuses = {
-				ENG_imperial_federation
-				ENG_the_kings_party
-				ENG_organize_the_blackshirts
+				SOV_RUSSIAN_ECONOMY
+				SOV_CRISIS_COALITION
+				SOV_LOOKING_OUTWARDS
 			}
 		}
 		"GER"={
@@ -89,6 +89,33 @@ bookmarks = {
 				JAP_the_zero
 				JAP_warrior_spirit
 				JAP_strike_on_the_southern_resource_area
+			}
+		}
+
+		"YUG"={
+			history = "SERB_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				Alexander_the_Mad
+				Army_in_Chaos
+			}
+			focuses = {
+				SAF_secure_interests_in_africa
+				SAF_support_the_german_coup
+				SAF_anti_colonialist_crusade
+			}
+		}
+		"DEN"={
+			history = "RAJ_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				RAJ_agrarian_society
+				RAJ_princely_states
+			}
+			focuses = {
+				RAJ_all_india_forward_bloc
+				RAJ_indian_gurkhas
+				RAJ_the_smiling_buddha
 			}
 		}
 
@@ -166,32 +193,18 @@ bookmarks = {
 			}
 		}
 
-		"YUG"={
+		"PAP"={
 			minor = yes
-			history = "SERB_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				Alexander_the_Mad
-				Army_in_Chaos
-			}
-			focuses = {
-				SAF_secure_interests_in_africa
-				SAF_support_the_german_coup
-				SAF_anti_colonialist_crusade
-			}
-		}
-		"DEN"={
-			minor = yes
-			history = "RAJ_GATHERING_STORM_DESC"
+			history = "GPU_DESC"
 			ideology = neutrality
 			ideas = {
-				RAJ_agrarian_society
-				RAJ_princely_states
+				Nationalist_Sympathisers
+				Legacy_of_Deutscher_Bund
 			}
 			focuses = {
-				RAJ_all_india_forward_bloc
-				RAJ_indian_gurkhas
-				RAJ_the_smiling_buddha
+				POL_the_baltic_alliance
+				POL_draw_closer_to_britain
+				POL_seek_accommodation_with_germany
 			}
 		}
 

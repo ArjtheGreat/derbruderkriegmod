@@ -38,7 +38,7 @@ focus_tree = {
   focus = {
     id = AUS_HEART_DEV_SCHEME
     icon = GFX_focus_industry
-    text = HEART_DEV_SCHEME
+    text = AUS_HEART_DEV_SCHEME
     prerequisite = { focus = AUS_BUILD_INDUSTRY }
     mutually_exclusive = {focus = AUS_IMPERIAL_DEV_SCHEME}
     x = -4
@@ -79,7 +79,7 @@ focus_tree = {
   focus = {
     id = AUS_IMPERIAL_DEV_SCHEME
     icon = GFX_focus_industry
-    text = IMPERIAL_DEV_SCHEME
+    text = AUS_IMPERIAL_DEV_SCHEME
     prerequisite = { focus = AUS_BUILD_INDUSTRY }
     mutually_exclusive = {focus = AUS_HEART_DEV_SCHEME}
     x = 4
@@ -462,9 +462,9 @@ focus_tree = {
     icon = GFX_focus_industry
     text = AUS_KAISERLICHE_HEER
     #prerequisite = { focus = ITA_industrial_effort_2 }
-    x = 28
+    x = 16
     y = 0
-    relative_position_id = AUS_KAISER_ADDRESS
+    relative_position_id = AUS_STATE_OF_EMPIRE
     cost = 10
     ai_will_do = {
       factor = 1
@@ -1623,9 +1623,9 @@ focus_tree = {
     x = 16
     y = 0
     relative_position_id = AUS_BUILD_INDUSTRY
-    cost = 5
+    cost = 2
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
@@ -1633,6 +1633,7 @@ focus_tree = {
 
     completion_reward = {
       add_political_power = 120
+			AUS = { country_event = austria.4 days = 3 }
     }
   }
 
@@ -1644,12 +1645,13 @@ focus_tree = {
     prerequisite = { focus = AUS_KAISER_SPEECH }
 		mutually_exclusive = { focus = AUS_REFORM }
 		mutually_exclusive = { focus = AUS_NAT_REGEN }
+		available = {has_country_flag = absolutism}
     x = -4
     y = 1
     relative_position_id = AUS_KAISER_SPEECH
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
@@ -1669,16 +1671,19 @@ focus_tree = {
     x = -2
     y = 1
     relative_position_id = AUS_ABSOLUTISM
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_political_power = -25
+			swap_ideas {
+				add_idea = Absolutism_2
+				remove_idea = Absolutism
+			}
     }
   }
 
@@ -1690,16 +1695,18 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_AUTOCRACY
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_political_power = -25
+      add_political_power = 100
+			add_stability = -0.1
+			add_war_support = 0.1
     }
   }
 
@@ -1711,16 +1718,18 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_ALL_HAIL_KAISER
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_political_power = -25
+      add_ideas = {
+				Kasier_Und_Reich
+			}
     }
   }
 
@@ -1733,16 +1742,24 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = AUS_ABSOLUTISM
-		cost = 5
+		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_political_power = -25
+			swap_ideas {
+				add_idea = Chaos_Vienna
+				remove_idea = Absolutism
+			}
+
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
 		}
 	}
 
@@ -1754,16 +1771,29 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = AUS_TO_BARRICADES
-		cost = 5
+		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_political_power = -25
+			add_stability = 0.1
+			add_war_support = 0.2
+			remove_ideas = {
+				Chaos_Vienna
+			}
+
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+
+			set_politics = {
+				ruling_party = communism
+			}
 		}
 	}
 
@@ -1775,16 +1805,27 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = AUS_LONG_LIVE_REV
-		cost = 5
+		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 20
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_political_power = -25
+			dismantle_faction = yes
+			create_faction = AUS_Internationale
+
+			on_create_faction = {
+				every_country = {
+					if = {
+						has_government = communism
+						is_in_faction = no
+						ROOT = { country_event =  austria.17 days = 5 }
+					}
+				}
+			}
 		}
 	}
 
@@ -1796,12 +1837,13 @@ focus_tree = {
     prerequisite = { focus = AUS_KAISER_SPEECH }
 		mutually_exclusive = { focus = AUS_ABSOLUTISM }
 		mutually_exclusive = { focus = AUS_NAT_REGEN }
+		available = {has_country_flag = reform}
     x = 0
     y = 1
     relative_position_id = AUS_KAISER_SPEECH
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
@@ -1820,16 +1862,19 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_REFORM
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_political_power = 25
+			swap_ideas = {
+				add_idea = Constitutionalism
+				remove_idea = Absolutism
+			}
     }
   }
 
@@ -1841,16 +1886,29 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_STRENGHTHEN_DIET
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_political_power = 25
+      add_popularity {
+				ideology = democratic
+				popularity = 0.3
+			}
+
+			set_country_leader_ideology = conservative
+
+			set_politics {
+				ruling_party = democratic
+			}
+
+			add_ideas = {
+				Karl_1
+			}
     }
   }
 
@@ -1862,16 +1920,20 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_CALL_REICHSRAT
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_political_power = 25
+      add_political_power = 150
+			add_popularity {
+				ideology = democratic
+				popularity = 0.15
+			}
     }
   }
 
@@ -1884,19 +1946,25 @@ focus_tree = {
     prerequisite = { focus = AUS_KAISER_SPEECH }
 		mutually_exclusive = { focus = AUS_REFORM }
 		mutually_exclusive = { focus = AUS_ABSOLUTISM }
+		available = {has_country_flag = nat_regen}
     x = 2
     y = 1
     relative_position_id = AUS_KAISER_SPEECH
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      add_stability = -0.20
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
     }
   }
 
@@ -1908,16 +1976,27 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_NAT_REGEN
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      add_ideas = {
+				Gleichschalstung
+			}
+
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+
+			set_politics = {
+				ruling_party = fascism
+			}
     }
   }
 
@@ -1929,16 +2008,26 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_EMPOWER_V_FRONT
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      add_party_popularity {
+				ideology = fascism
+				popularity = 0.3
+			}
+
+			add_stability = 0.2
+
+			swap_ideas {
+				add_idea = Gleichschalstung_2
+				remove_idea = Gleichschalstung
+			}
     }
   }
 
@@ -1950,16 +2039,17 @@ focus_tree = {
     x = 0
     y = 1
     relative_position_id = AUS_ABOLISH_MONARCHY
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      add_political_power = 100
+			add_stability = 0.05
     }
   }
 
@@ -1973,16 +2063,16 @@ focus_tree = {
     x = 0
     y = 2
     relative_position_id = AUS_LONG_LIVE_REV
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      add_stability = 0.05
     }
   }
 
@@ -1991,19 +2081,25 @@ focus_tree = {
     icon = GFX_focus_industry
     text = AUS_UPHOLD_CONCERT
     prerequisite = { focus = AUS_METTERNICH }
-    x = 0
-    y = -2
+    x = 3
+    y = 1
     relative_position_id = AUS_METTERNICH
-    cost = 5
+		mutually_exclusive = { focus = AUS_PATH_OF_AGGRESSION }
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      give_guarantee = ROM
+			give_guarantee = BUL
+			give_guarantee = YUG
+			give_guarantee = POL
+			give_guarantee = GRE
+			give_guarantee = ALB
     }
   }
 
@@ -2012,19 +2108,23 @@ focus_tree = {
     icon = GFX_focus_industry
     text = AUS_INVITE_BALKANS
     prerequisite = { focus = AUS_UPHOLD_CONCERT }
-    x = 0
-    y = -2
+    x = -2
+    y = 1
     relative_position_id = AUS_UPHOLD_CONCERT
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      YUG = {country_event = austria.17 days = 5}
+			BUL = {country_event = austria.17 days = 5}
+			ROM = {country_event = austria.17 days = 5}
+			GRE = {country_event = austria.17 days = 5}
+			ALB = {country_event = austria.17 days = 5}
     }
   }
 
@@ -2032,20 +2132,22 @@ focus_tree = {
     id = AUS_INVITE_SCANDANAVIA
     icon = GFX_focus_industry
     text = AUS_INVITE_SCANDANAVIA
-    prerequisite = { focus = AUS_INVITE_BALKANS }
-    x = 0
-    y = -2
+		prerequisite = { focus = AUS_UPHOLD_CONCERT }
+    x = 2
+    y = 0
     relative_position_id = AUS_INVITE_BALKANS
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+			NOR = {country_event = austria.17 days = 5}
+			SWE = {country_event = austria.17 days = 5}
+			DEN = {country_event = austria.17 days = 5}
     }
   }
 
@@ -2053,20 +2155,45 @@ focus_tree = {
     id = AUS_INVITE_BRITAIN
     icon = GFX_focus_industry
     text = AUS_INVITE_BRITAIN
-    prerequisite = { focus = AUS_INVITE_SCANDANAVIA }
-    x = 0
-    y = -2
+		prerequisite = { focus = AUS_UPHOLD_CONCERT }
+    x = 2
+    y = 0
     relative_position_id = AUS_INVITE_SCANDANAVIA
-    cost = 5
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      ENG = {country_event = austria.17 days = 5}
+			IRE = {country_event = austria.17 days = 5}
+    }
+  }
+
+	focus = {
+    id = AUS_FOUNDATIONS_EU
+    icon = GFX_focus_industry
+    text = AUS_FOUNDATIONS_EU
+    prerequisite = { focus = AUS_INVITE_BRITAIN }
+		prerequisite = { focus = AUS_INVITE_BALKANS }
+		prerequisite = { focus = AUS_INVITE_SCANDANAVIA}
+    x = -2
+    y = 1
+    relative_position_id = AUS_INVITE_BRITAIN
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      set_faction_name = AUS_EU
+			news_event = { id = austria.666 hours = 4 }
     }
   }
 
@@ -2074,22 +2201,391 @@ focus_tree = {
     id = AUS_BELLI_GERANT
     icon = GFX_focus_industry
     text = AUS_BELLI_GERANT
-    prerequisite = { focus = AUS_INVITE_BRITAIN }
+    prerequisite = { focus = AUS_FOUNDATIONS_EU }
     x = 0
-    y = -2
-    relative_position_id = AUS_INVITE_BRITAIN
-    cost = 5
+    y = 1
+    relative_position_id = AUS_FOUNDATIONS_EU
+    cost = 10
     ai_will_do = {
-      factor = 1
+      factor = 20
     }
 
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_RESEARCH }
 
     completion_reward = {
-      add_stability = -0.25
+      add_stability = 0.15
+			add_war_support = -0.1
     }
   }
+
+	focus = {
+    id = AUS_PATH_OF_AGGRESSION
+    icon = GFX_focus_industry
+    text = AUS_PATH_OF_AGGRESSION
+    prerequisite = { focus = AUS_METTERNICH }
+    x = -2
+    y = 1
+    relative_position_id = AUS_METTERNICH
+		mutually_exclusive = { focus = AUS_UPHOLD_CONCERT }
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			add_ideas = {
+				Path_of_Agression
+			}
+			news_event = { id = austria.667 hours = 4 }
+    }
+  }
+
+	focus = {
+    id = AUS_ANNEX_BUCOVINA
+    icon = GFX_focus_industry
+    text = AUS_ANNEX_BUCOVINA
+    prerequisite = { focus = AUS_PATH_OF_AGGRESSION }
+    x = 0
+    y = 1
+    relative_position_id = AUS_PATH_OF_AGGRESSION
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+				ROM = { country_event = austria.200 days = 3 }
+				}
+    }
+
+	focus = {
+    id = AUS_INVADE_BALKANS
+    icon = GFX_focus_industry
+    text = AUS_INVADE_BALKANS
+    prerequisite = { focus = AUS_ANNEX_BUCOVINA }
+    x = 0
+    y = 1
+    relative_position_id = AUS_ANNEX_BUCOVINA
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      create_wargoal = {target = ROM type = annex_everything}
+			create_wargoal = {target = YUG type = annex_everything}
+			create_wargoal = {target = BUL type = annex_everything}
+			create_wargoal = {target = ALB type = annex_everything}
+			create_wargoal = {target = GRE type = annex_everything}
+    }
+  }
+
+	focus = {
+    id = AUS_FINISH_OFF_THE_GERMANS
+    icon = GFX_focus_industry
+    text = AUS_FINISH_OFF_THE_GERMANS
+    prerequisite = { focus = AUS_INVADE_BALKANS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_INVADE_BALKANS
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      create_wargoal = {
+				type = annex_everything
+				target = GER
+			}
+    }
+  }
+
+	focus = {
+    id = AUS_SUPERPOWER
+    icon = GFX_focus_industry
+    text = AUS_SUPERPOWER
+    prerequisite = { focus = AUS_FINISH_OFF_THE_GERMANS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_FINISH_OFF_THE_GERMANS
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.15
+    }
+  }
+
+
+	#######
+	focus = {
+    id = AUS_STATE_OF_EMPIRE
+    icon = GFX_focus_industry
+    text = AUS_STATE_OF_EMPIRE
+    #prerequisite = { focus = AUS_KAISER_SPEECH }
+    x = 8
+    y = 0
+    relative_position_id = AUS_KAISER_SPEECH
+    cost = 5
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+      add_political_power = -25
+    }
+  }
+
+	focus = {
+    id = AUS_BAN_CZECHS
+    icon = GFX_focus_industry
+    text = AUS_BAN_CZECHS
+    prerequisite = { focus = AUS_STATE_OF_EMPIRE }
+		mutually_exclusive = { focus = AUS_REOPEN_DIET }
+    x = -2
+    y = 1
+    relative_position_id = AUS_STATE_OF_EMPIRE
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+				add_timed_idea = {idea = Prague_Massacre days = 100}
+				remove_ideas = {Bohemian_Outrage}
+
+				news_event = { id = austria.2 hours = 2}
+    }
+  }
+
+	focus = {
+    id = AUS_EXECUTE_BELA_KUN
+    icon = GFX_focus_industry
+    text = AUS_EXECUTE_BELA_KUN
+    prerequisite = { focus = AUS_BAN_CZECHS }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_BAN_CZECHS
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+				AUS = { country_event =  austria.1 days = 3 }
+    }
+  }
+
+	focus = {
+    id = AUS_INTERVENE_LOMBARDY
+    icon = GFX_focus_industry
+    text = AUS_INTERVENE_LOMBARDY
+    prerequisite = { focus = AUS_EXECUTE_BELA_KUN }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_EXECUTE_BELA_KUN
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+				remove_ideas = {
+					Giovane_Italia
+				}
+				add_timed_idea = {
+					idea = Sixty_Days_Milan
+					days = 60 #######NO SHIT SHERLOCK
+				}
+				news_event = { id = austria.3 hours = 2 }
+    }
+  }
+
+	focus = {
+		id = AUS_CENTRALISM
+		#icon = AUS_CENTRALISM
+		text = AUS_CENTRALISM
+		prerequisite = { focus = AUS_INTERVENE_LOMBARDY }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+		x = 0
+		y = 1
+		relative_position_id = AUS_INTERVENE_LOMBARDY
+		cost = 15
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = Croat_Support
+					add_idea = Centralism
+				}
+		}
+	}
+
+
+	focus = {
+    id = AUS_REOPEN_DIET
+    icon = GFX_focus_industry
+    text = AUS_REOPEN_DIET
+    prerequisite = { focus = AUS_STATE_OF_EMPIRE }
+		mutually_exclusive = { focus = AUS_BAN_CZECHS }
+    x = 2
+    y = 1
+    relative_position_id = AUS_STATE_OF_EMPIRE
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+				swap_ideas = {
+					remove_idea = Bohemian_Outrage
+					add_idea = Autonomism
+				}
+    }
+  }
+
+	focus = {
+    id = AUS_PARDON_HUNGARIAN_REVS
+    icon = GFX_focus_industry
+    text = AUS_PARDON_HUNGARIAN_REVS
+    prerequisite = { focus = AUS_REOPEN_DIET }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_REOPEN_DIET
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+				swap_ideas = {
+					remove_idea = Autonomism
+					add_idea = Autonomism_2
+				}
+    }
+  }
+
+	focus = {
+    id = ITALIAN_AUTONOMY
+    icon = GFX_focus_industry
+    text = ITALIAN_AUTONOMY
+    prerequisite = { focus = AUS_PARDON_HUNGARIAN_REVS }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+    x = 0
+    y = 1
+    relative_position_id = AUS_PARDON_HUNGARIAN_REVS
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			swap_ideas = {
+				remove_idea = Autonomism_2
+				add_idea = Autonomism_3
+			}
+    }
+  }
+
+	focus = {
+		id = AUS_FEDERALISM
+		#icon = AUS_FEDERALISM
+		text = AUS_FEDERALISM
+		prerequisite = { focus = ITALIAN_AUTONOMY }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+		x = 0
+		y = 1
+		relative_position_id = ITALIAN_AUTONOMY
+		cost = 15
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+				swap_ideas = {
+					remove_idea = Autonomism_3
+					add_idea = Federalism
+				}
+		}
+	}
+
+	focus = {
+    id = UNITED_EMPIRE
+    icon = GFX_focus_industry
+    text = UNITED_EMPIRE
+    prerequisite = { focus = AUS_FEDERALISM focus = AUS_CENTRALISM }
+		#mutually_exclusive = { focus = AUS_PARDON_HUNGARIAN_REVS }
+    x = -2
+    y = 1
+    relative_position_id = AUS_FEDERALISM
+    cost = 10
+    ai_will_do = {
+      factor = 20
+    }
+
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_RESEARCH }
+
+    completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+    }
+  }
+
+
+
 
 
 }

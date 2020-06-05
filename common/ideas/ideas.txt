@@ -38,6 +38,25 @@ ideas = {
 			}
 		}
 
+		Absolutism_2 = {
+
+			allowed = {
+				has_government = neutrality
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
 		Bohemian_Outrage = {
 
 			allowed = {
@@ -118,6 +137,7 @@ ideas = {
 			allowed = {
 				has_government = neutrality
 				has_government = democratic
+				has_government = fascism
 			}
 
 			allowed_civil_war = {
@@ -129,6 +149,69 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.2
 				army_org_factor = -0.08
+			}
+		}
+
+		Nicholas_the_2nd_2 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+				has_government = fascism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.2
+				army_org_factor = 0.15
+				conscription = 0.015
+			}
+		}
+
+		Nicholas_the_2nd_3 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+				has_government = fascism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				army_org_factor = 0.08
+
+			}
+		}
+
+		Nicholas_the_2nd_4 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+				has_government = fascism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.1
+				army_org_factor = 0.1
+
 			}
 		}
 
@@ -150,6 +233,48 @@ ideas = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
 				consumer_goods_factor = 0.05
+			}
+		}
+
+		Legacy_of_1905_2 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.1
+				war_support_factor = 0.1
+
+			}
+		}
+
+		Legacy_of_1905_3 = {
+
+			allowed = {
+				has_government = neutrality
+				has_government = democratic
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+				conscription_factor = 0.1
+				consumer_goods_factor = -0.05
+
 			}
 		}
 		Army_Reform = {
@@ -396,7 +521,7 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = 0.1
-				conscription_factor = 0.25
+				conscription_factor = -0.25
 				stability_factor = -0.2
 				war_support_factor = -0.15
 			}
@@ -1024,7 +1149,7 @@ ideas = {
 			}
 	}
 
-	Rex_Regnat {
+	Rex_Regnat = {
 
 		allowed = {
 			always = yes
@@ -1041,7 +1166,7 @@ ideas = {
 			democratic_drift = 0.1
 			}
 	}
-	Lafayette_Dream {
+	Lafayette_Dream = {
 
 		allowed = {
 			always = yes
@@ -1059,7 +1184,7 @@ ideas = {
 			}
 	}
 
-	Rights_of_Men {
+	Rights_of_Men = {
 
 		allowed = {
 			always = yes
@@ -1079,7 +1204,7 @@ ideas = {
 			}
 	}
 
-	New_Rights_of_Men {
+	New_Rights_of_Men = {
 
 		allowed = {
 			always = yes
@@ -1100,7 +1225,7 @@ ideas = {
 			}
 	}
 
-	Vive_la_Republic {
+	Vive_la_Republic = {
 
 		allowed = {
 			always = yes
@@ -1118,7 +1243,7 @@ ideas = {
 			}
 	}
 
-	Vive_la_Commune {
+	Vive_la_Commune = {
 
 		allowed = {
 			always = yes
@@ -1136,7 +1261,7 @@ ideas = {
 			}
 	}
 
-	True_Equality {
+	True_Equality = {
 
 		allowed = {
 			always = yes
@@ -1155,7 +1280,7 @@ ideas = {
 	}
 
 
-	Conte_Tyrannie {
+	Conte_Tyrannie = {
 
 		allowed = {
 			always = yes
@@ -1173,7 +1298,7 @@ ideas = {
 			}
 	}
 
-	Napolean_6 {
+	Napolean_6 = {
 
 		allowed = {
 			always = yes
@@ -1190,7 +1315,24 @@ ideas = {
 			}
 	}
 
-	National_Syndicalism {
+	Karl_1 = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = 0.15
+			}
+	}
+
+	National_Syndicalism = {
 
 		allowed = {
 			always = yes
@@ -1214,7 +1356,7 @@ ideas = {
 			}
 	}
 
-	Secret_Police {
+	Secret_Police = {
 
 		allowed = {
 			always = yes
@@ -1234,6 +1376,1231 @@ ideas = {
 			}
 
 	}
+
+	Kasier_Und_Reich = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			conscription_factor = 0.25
+
+			}
+
+	}
+
+	Chaos_Vienna = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = -0.2
+			war_support_factor = -0.2
+			consumer_goods_factor = 0.2
+			political_power_factor = -0.25
+
+			}
+
+	}
+
+	Chaos_Italy = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = -0.2
+			war_support_factor = -0.2
+			consumer_goods_factor = 0.2
+			political_power_factor = -0.25
+
+			}
+
+	}
+
+	Chaos_Moscow = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = -0.2
+			war_support_factor = -0.2
+			consumer_goods_factor = 0.2
+			political_power_factor = -0.25
+
+			}
+
+	}
+
+	Constitutionalism = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			political_power_factor = 0.15
+			drift_defence_factor = 0.2
+			stability_factor = 0.1
+
+			}
+
+	}
+
+	Gleichschalstung = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			war_support_factor = 0.1
+			conscription = 0.015
+			stability_factor = -0.15
+			consumer_goods_factor = -0.05
+			}
+
+	}
+
+	Gleichschalstung_2 = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			war_support_factor = 0.1
+			conscription = 0.015
+			stability_factor = 0.05
+			consumer_goods_factor = -0.05
+			}
+
+	}
+
+	Path_of_Agression = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			justify_war_goal_time = -0.4
+			conscription = 0.005
+			}
+
+	}
+
+	Rule_of_Vozdh = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = 0.1
+			consumer_goods_factor = 0.05
+			conscription_factor = 0.3
+			}
+
+	}
+
+	Proliteriat = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = 0.1
+			war_support_factor = 0.15
+			conscription = 0.01
+			army_org_factor = 0.08
+			consumer_goods_factor = -0.05
+			justify_war_goal_time = -0.25
+			}
+
+	}
+
+	Peace_in_Time = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = 0.1
+			war_support_factor = -0.2
+			enemy_justify_war_goal_time = 0.5
+			justify_war_goal_time = 0.25
+			}
+
+	}
+
+	Devolution = {
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			conscription = 0.01
+			}
+	}
+
+	Industrializing = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+	Industrializing_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			conscription = -0.05
+		}
+	}
+
+	Industrializing_3 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			conscription = -0.10
+			stability_factor = 0.05
+		}
+	}
+
+	Colonization = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		MONTHLY_POPULATION = 0.10
+		}
+	}
+
+	SOVIETIZATION = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.10
+			stability_factor = 0.10
+		}
+	}
+
+	SOVIETIZATION_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.10
+			stability_factor = 0.10
+			monthly_population = 0.20
+		}
+	}
+
+	Purged_Council = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.10
+			political_power_gain = -0.20
+		}
+	}
+
+	Purged_Army = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			army_org_factor = -0.20
+			army_morale_gain = -0.20
+		}
+	}
+
+	Will_Duce = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			political_power_factor = 0.15
+		}
+	}
+
+	victor_emmanuel_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = 0.3
+		}
+	}
+
+	Royal_Supremacy = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.15
+			political_power_gain = 0.2
+		}
+	}
+
+	Will_People = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.15
+			political_power_gain = 0.2
+		}
+	}
+
+	Italian_Revolution = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.15
+			political_power_gain = 0.2
+		}
+	}
+
+	Prague_Massacre = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.2
+			stability_weekly = 0.01
+		}
+	}
+
+	Sixty_Days_Milan = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_weekly = -0.01
+			consumer_goods_factor = 0.05
+			160 = {
+				resistance_damage_to_garrison = 0.25
+			}
+			159 = {
+				resistance_damage_to_garrison = 0.25
+			}
+		}
+	}
+
+	Centralism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_weekly = 0.2
+			war_support_factor = 0.1
+			political_power_factor = 0.15
+		}
+	}
+
+	Federalism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			conscription_factor = 0.25
+			consumer_goods_factor = -0.1
+			political_power_factor = 0.3
+		}
+	}
+
+	Autonomism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_weekly = -0.2
+			war_support_factor = -0.15
+		}
+	}
+
+	Autonomism_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			political_power_gain = -0.5
+			conscription_factor = -0.2
+			stability_weekly = -0.2
+			war_support_factor = -0.15
+		}
+	}
+
+	Autonomism_3 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			political_power_gain = -0.5
+			conscription_factor = -0.2
+			stability_weekly = -0.2
+			war_support_factor = -0.15
+			army_org_factor = 0.08
+			consumer_goods_factor = 0.1
+		}
+	}
+
+	TUR_DIRECTION = {
+
+
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+		}
+
+	TUR_REACTION = {
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		stability_factor = 0.1
+		political_power_gain = 0.1
+		}
+	}
+
+	TUR_REACTION_2 = {
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		war_support_factor = 0.1
+		stability_factor = 0.1
+		political_power_gain = 0.1
+		}
+	}
+
+	TUR_ARAB_AUTONOMY = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		political_power_gain = -0.1
+		}
+	}
+
+	TUR_ARAB_AUTONOMY_2 = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		political_power_gain = -0.1
+		stability_factor = -0.1
+		}
+	}
+
+	TUR_UNITED_EMPIRE = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		war_support_factor = 0.15
+		conscription_factor = 0.2
+		political_power_gain = 0.15
+		stability_factor = 0.1
+		}
+	}
+
+	TUR_MILITARY_GOVERNMENT = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		army_org_factor = 0.08
+		conscription_factor = 0.01
+		stability_factor = -0.05
+		}
+	}
+
+	TUR_SIX_ARROWS = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		democratic_drift = 0.10
+		political_power_gain = 0.2
+		war_support_factor = 0.1
+		army_org_factor = 0.1
+		conscription_factor = 0.01
+		stability_factor = 0.05
+		}
+	}
+
+	TUR_CALIPHATE = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		army_morale_factor = 0.1
+		fascism_drift = 0.10
+		political_power_gain = 0.1
+		war_support_factor = 0.1
+		conscription_factor = 0.015
+		}
+	}
+
+	TUR_ABSOLUTISM = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		stability_factor = 0.1
+		political_power_gain = 0.1
+		war_support_factor = 0.1
+		neutrality_drift = 0.10
+		}
+	}
+
+	TUR_BARRACKS_MUTINY = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		army_morale_factor = -0.5
+		land_reinforce_rate = -0.5
+		army_org_factor = -0.2
+		conscription_factor = -0.25
+		production_speed_arms_factory_factor = -0.1
+		}
+	}
+
+	TUR_ISLAMIC_SOCIALISM = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		stability_factor = 0.1
+		conscription_factor = 0.1
+		communism_drift = 0.10
+		production_factory_efficiency_gain_factor = 0.1
+		consumer_goods_factor = -0.05
+		}
+	}
+
+	TUR_NATIONALISM = {
+
+
+		allowed = {
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		war_support_factor = 0.1
+		conscription_factor = 0.01
+		}
+	}
+
+	sov_agrarianism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_factory_efficiency_gain_factor = -0.1
+			production_speed_buildigns_factor = -0.1
+		}
+	}
+
+	feudalism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_factory_efficiency_gain_factor = -0.1
+			production_speed_buildigns_factor = -0.1
+			stability_factor = 0.05
+		}
+	}
+
+	feudalism_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+			production_speed_buildigns_factor = -0.1
+			stability_factor = 0.1
+		}
+	}
+
+	feudalism_3 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.1
+			production_speed_buildigns_factor = -0.1
+			stability_factor = 0.1
+			production_speed_buildings_factor = 0.1
+		}
+	}
+
+	feudalism_4 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		consumer_goods_factor = -0.05
+			production_factory_efficiency_gain_factor = 0.2
+			production_speed_buildigns_factor = -0.1
+			stability_factor = 0.1
+			production_speed_buildings_factor = 0.1
+		}
+	}
+
+	narodnik_eco = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		production_factory_efficiency_gain_factor = -0.1
+			production_speed_buildigns_factor = -0.1
+			stability_factor = 0.05
+		}
+	}
+
+	narodnik_eco_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		production_factory_efficiency_gain_factor = -0.1
+			production_speed_buildings_factor = 0.1
+			stability_factor = 0.1
+		}
+		}
+
+		narodnik_eco_3 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			stability_factor = 0.1
+		}
+	}
+
+	narodnik_eco_4 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.1
+			production_speed_buildings_factor = 0.1
+			stability_factor = 0.1
+		}
+	}
+
+	Constitutional_Crisis = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			stability_factor = -0.3
+			political_power_gain = -0.7
+		}
+	}
+
+	Swedish_Occupation = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			138 = {
+				production_speed_buildings_factor = -0.35
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+	}
+
+	Swedish_Occupation_2 = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			138 = {
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+	}
+
+	Royalism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			political_power_factor = 0.2
+			war_support_weekly = 0.01
+			army_morale_factor = 0.1
+		}
+	}
+
+	Parliamentarism = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			political_power_factor = 0.35
+			stability_weekly = 0.01
+			army_org_factor - 0.08
+		}
+	}
+
+	Masters_of_Baltic = {
+
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			war_support_factor = 0.1
+			army_attack_factor = 0.2
+			army_defence_factor = 0.2
+			convoy_escort_efficiency = 0.25
+			naval_coordination = 0.03
+			army_org_factor - 0.1
+		}
+	}
+
+	Danish_Command = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			army_org_factor = 0.1
+			army_defence_factor = 0.1
+		}
+	}
+
+	Capitalism = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+	}
+
+	Capitalism_2 = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			stability_factor = 0.05
+		}
+	}
+
 
 	}
 }

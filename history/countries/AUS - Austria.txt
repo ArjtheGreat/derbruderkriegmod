@@ -43,11 +43,11 @@ set_popularities = {
 set_convoys = 5
 
 create_country_leader = {
-	name = "Otto Von Hapsburg"
+	name = "Karl the 1st"
 	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "ottovonhapsburg.dds"
+	picture = "gfx/leaders/KarlPortrait.dds"
 	expire = "1965.1.1"
-	ideology = centrism
+	ideology = despotism
 	traits = {
 		#
 	}
