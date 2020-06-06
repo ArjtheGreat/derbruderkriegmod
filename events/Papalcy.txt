@@ -1,12 +1,10 @@
-add_namespace = PAP
 
-# PAPAL
+add_namespace = papal
 
-#conclave event
 country_event = {
-	id = PAP_CONCLAVE.1
-	title = PAP_CONCLAVE.1.t
-	desc = PAP_CONCLAVE.1.d
+	id = papal.1
+	title = papal.1.t
+	desc = papal.1.d
 	picture = GFX_report_event_german_speech
 	
 	is_triggered_only = yes
@@ -15,30 +13,29 @@ country_event = {
 	ai_chance = {
 	base = 1
 	}
-		name = PAP_CONCLAVE.1.a
+		name = papal.1.a
 		complete_national_focus = PAP_CONSERVATIVE
 		}
 		option = {
 	ai_chance = {
 	base = 1
 	}
-		name = PAP_CONCLAVE.1.b
+		name = papal.1.b
 		complete_national_focus = PAP_LIBERAL
 		}
 		option = {
 	ai_chance = {
 	base = 1
 	}
-		name = PAP_CONCLAVE.1.c
+		name = papal.1.c
 		complete_national_focus = PAP_RIOT
 		}
 		}
-	
-#this one starts the tree	
+		
 country_event = {
-	id = PAP_CONCLAVE.2
-	title = PAP_CONCLAVE.2.t
-	desc = PAP_CONCLAVE.2.d
+	id = papal.2
+	title = papal.2.t
+	desc = papal.2.d
 	picture = GFX_report_event_german_speech
 	mean_time_to_happen = { days = 1 }
 	
@@ -49,7 +46,146 @@ country_event = {
 	ai_chance = {
 	base = 1
 	}
-		name = PAP_CONCLAVE.2.a
+		name = papal.2.a
 		complete_national_focus = PAP_DEATH
+		}
+		}
+		
+		country_event = {
+		id = papal.3
+		title = papal.3.t
+		desc = papal.3.d
+		picture = GFX_report_event_german_speech
+	
+		is_triggered_only = YES
+	
+		option = {
+		ai_chance = {
+		base = 1
+		}
+		name = papal.3.a
+		PAP = { add_to_faction = ROOT }
+		ROOT = {
+		declare_war_on = {
+    target = TUR
+    type = annex_everything
+	}
+	}
+		}
+		option = {
+		ai_chance = {
+		base = 0
+		}
+		name = papal.3.b
+		}
+		}
+		
+		country_event = {
+		id = papal.4
+		title = papal.4.t
+		desc = papal.4.d
+		picture = GFX_report_event_german_speech
+	
+		is_triggered_only = YES
+	
+		option = {
+		ai_chance = {
+		base = 1
+		}
+		name = papal.4.a
+		}
+		option = {
+		ai_chance = {
+		base = 0
+		}
+		name = papal.4.b
+		}
+		option = {
+		ai_chance = {
+		base = 0
+		}
+		name = papal.4.c
+		}
+		}
+		
+		country_event = {
+		id = papal.5
+		title = papal.5.t
+		desc = papal.5.d
+		picture = GFX_report_event_german_speech
+	
+		is_triggered_only = YES
+	
+		option = {
+		ai_chance = {
+		base = 1
+		}
+		name = papal.5.a
+		declare_war_on = {
+    target = ITA
+    type = annex_everything
+	}
+		PAP = {
+		declare_war_on = {
+    target = ITA
+    type = annex_everything
+	}
+		}
+		}
+		option = {
+		ai_chance = {
+		base = 0
+		}
+		name = papal.5.b
+		PAP = {
+		country_event = papal.6
+		}
+		}
+		}
+		
+		#declined offer
+		country_event = {
+		id = papal.6
+		title = papal.6.t
+		desc = papal.6.d
+		picture = GFX_report_event_german_speech
+	
+		is_triggered_only = YES
+	
+		option = {
+		ai_chance = {
+		base = 1
+		}
+		name = papal.6.a
+		}
+		}
+		
+		country_event = {
+		id = papal.7
+		title = papal.7.t
+		desc = papal.7.d
+		picture = GFX_report_event_german_speech
+	
+		is_triggered_only = YES
+	
+		option = {
+		ai_chance = {
+		base = 2
+		}
+		name = papal.7.a
+		PAP = {
+		annex_country = {
+    target = ITA
+    transfer_troops = yes
+	}
+		}
+		}
+		option = {
+		ai_chance = {
+		base = 0
+		}
+		name = papal.7.b
+		country_event = {
+		id = papal.6
 		}
 		}
