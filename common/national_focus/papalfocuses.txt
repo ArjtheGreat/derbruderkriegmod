@@ -55,7 +55,7 @@ focus_tree = {
 		completion_reward = {
 		add_political_power = 100
 		country_event = {
-    id = PAP_CONCLAVE.1
+    id = papal.1
 	}
 		}
 	}
@@ -82,7 +82,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = -0.05
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.1
+	}
 		}
 	}
 
@@ -108,11 +111,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_stability = 0.05
 			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
+    ideology = neutrality
+    popularity = 0.1
+}
 		}
 	}
 
@@ -128,12 +130,14 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+		has_completed_focus = PAP_CONSERVATIVE
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_stability = 0.1
 		}
 		}
 
@@ -156,6 +160,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = Catholic_socialism
 		}
 		}
 
@@ -177,6 +182,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = Catholic_socialism
+		add_idea = Catholic_socialism_2
+		}
 		}
 		}
 
@@ -198,6 +207,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = Holy_principle
 		}
 	}
 
@@ -219,6 +229,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = Holy_principle
+		add_idea = Holy_principle_2
+		}
 		}
 	}
 
@@ -241,6 +255,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = neutrality_idea
 		}
 	}
 
@@ -263,6 +278,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+    type = puppet_wargoal_focus
+    target = SIK
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = MON
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = PRC
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = TAN
+	}
 		}
 	}
 
@@ -285,6 +316,46 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+    type = puppet_wargoal_focus
+	target = SPR
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = ENG
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = IRE
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = BEL
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = HOL
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = LUX
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = DEN
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = SWE
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = NOR
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = SOV
+	}
 		}
 	}
 
@@ -307,6 +378,18 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+    type = puppet_wargoal_focus
+	target = ITA
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = GER
+	}
+	create_wargoal = {
+    type = puppet_wargoal_focus
+	target = JAP
+	}
 		}
 	}
 
@@ -329,6 +412,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = Crusade
 		}
 	}
 
@@ -350,6 +434,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = Divine_glory
 		}
 	}
 
@@ -372,6 +457,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = Expansion
 		}
 	}
 
@@ -393,7 +479,28 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-		}
+		create_faction = "Holy League"
+		declare_war_on = {
+    target = TUR
+    type = annex_everything
+	}
+	add_named_threat = { 
+    threat = 8
+    name = Tenth_Crusade
+}
+	hidden_effects = { 
+	BUL = { country_event = papal.3 }
+	YUG = { country_event = papal.3 }
+	GRE = { country_event = papal.3 }
+	ALB = { country_event = papal.3 }
+	ROM = { country_event = papal.3 }
+	FRA = { country_event = papal.3 }
+	AUS = { country_event = papal.3 }
+	FGD = { country_event = papal.3 }
+	GPU = { country_event = papal.3 }
+	}
+	custom_effect_tooltip = call_crusade
+	}
 	}
 
 	focus = {
@@ -409,13 +516,43 @@ focus_tree = {
 		}
 		available = {
 		controls_state = 454
-		controls_state = 554
+		controls_state = 553
+		controls_state = 342
+		controls_state = 677
 		}
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		PAP = {
+		puppet = ISR
+		puppet = SYR
+		puppet = ANA
+		puppet = ANT
+		puppet = HEJ
+		}
+		ISR = {
+		set_cosmetic_tag = ISR_CRUSADER 
+		set_state_owner = 454 
+		set_state_controller = 454
+		}
+		SYR = {
+		set_cosmetic_tag = SYR_CRUSADER 
+		set_state_owner = 553
+		set_state_controller = 553
+		}
+		ANA = {
+		set_state_owner = 342
+		set_state_controller = 342
+		}
+		ANT = {
+		set_state_owner = 677
+		set_state_controller = 677
+		}
+		HEJ = {
+		add_state_core = 679
+		}
 		}
 	}
 
@@ -437,6 +574,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+    type = annex_everything
+    target = SAU
+	}
+	create_wargoal = {
+    type = annex_everything
+    target = OMA
+	}
+	create_wargoal = {
+    type = annex_everything
+    target = YEM
+	}
+
 		}
 	}
 
@@ -458,6 +608,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_ideas = Orders
 		}
 	}
 
@@ -480,6 +631,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		set_politics = {
+	ruling_party = democratic
+	}
 		}
 	}
 
@@ -501,6 +655,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		country_event = papal.4
 		}
 	}
 
@@ -523,6 +678,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_stability = 0.1
+		add_war_support = 0.1
 		}
 	}
 
@@ -544,6 +701,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		FRA = {
+		country_event = papal.5
+		}
 		}
 	}
 
@@ -569,6 +729,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_popularity = {
+    ideology = democratic
+    popularity = 0.1
+	}
 		}
 	}
 
@@ -590,6 +754,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		set_politics = {
+	ruling_party = democratic
+	}
+	set_cosmetic_tag = PAP_REP
+	add_ideas = Dubious_claim
 		}
 	}
 
@@ -611,6 +780,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		ITA = {
+		country_event = {
+		id = papal.7
+		}
+		}
 		}
 	}
 
@@ -632,6 +806,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+    type = annex_everything
+    target = SPR
+	}
+	create_wargoal = {
+    type = annex_everything
+    target = POR
+	}
 		}
 	}
 
@@ -653,6 +835,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+		type = annex_everything
+		target = FRA
+		}
 		}
 	}
 
@@ -674,6 +860,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		add_political_power = 100
+		458 = {
+		remove_building = {
+    type = infrastructure
+	level = 10
+	}
+	}
 		}
 	}
 
@@ -695,6 +888,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+		type = annex_everything
+		target = PER
+		}
 		}
 	}
 
@@ -716,6 +913,22 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+		type = annex_everything
+		target = YUG
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = BUL
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = ALB
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = ROM
+		}
 		}
 	}
 
@@ -737,6 +950,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+		type = annex_everything
+		target = GRE
+		}
 		}
 	}
 
@@ -758,6 +975,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+		type = annex_everything
+		target = TUR
+		}
 		}
 	}
 
@@ -779,6 +1000,30 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		create_wargoal = {
+		type = annex_everything
+		target = LUX
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = BEL
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = HOL
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = GER
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = AUS
+		}
+		create_wargoal = {
+		type = annex_everything
+		target = SWI
+		}
 		}
 	}
 
@@ -801,6 +1046,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
+		swap_ideas = {
+		remove_idea = Dubious_claim
+		add_idea = Heir_rome
 		}
 	}
 	}
