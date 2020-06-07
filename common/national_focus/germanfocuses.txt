@@ -11,11 +11,13 @@ focus_tree = {
 	}
 
 	default = no
+	
+	continuous_focus_position = { x = 0, y = 2000 }
 
 	focus = {
 		id = GER_four_year_plan2
 		icon = GFX_goal_generic_construction
-		x = 6
+		x = 0
 		y = 0
 		cost = 10
 		ai_will_do = {
@@ -147,8 +149,8 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_civ_factory
 		dynamic = yes
 		prerequisite = { focus = GER_autarky2 }
-		x = 0
-		y = 4
+		x = 4
+		y = 0
 		relative_position_id = GER_hermann_goring_werke2
 		cost = 10
 		ai_will_do = {
@@ -483,7 +485,7 @@ focus_tree = {
 		#prerequisite = { focus = ITA_industrial_effort_2 }
 		x = 16
 		y = 0
-		relative_position_id = GER_BUILD_INDUSTRY
+		relative_position_id = GER_PRUSSIAN_STATE
 		cost = 10
 		ai_will_do = {
 			factor = 1
@@ -1629,4 +1631,869 @@ focus_tree = {
 			}
 		}
 	}
+
+
+	focus = {
+		id = GER_PRUSSIAN_STATE
+		icon = GFX_focus_industry
+		text = GER_PRUSSIAN_STATE
+		#prerequisite = { focus = AUS_METTERNICH }
+		x = 12
+		y = 0
+		relative_position_id = GER_four_year_plan2
+		#mutually_exclusive = { focus = AUS_UPHOLD_CONCERT }
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_ARMY_WITH_STATE
+		icon = GFX_focus_industry
+		text = GER_ARMY_WITH_STATE
+		prerequisite = { focus = GER_PRUSSIAN_STATE }
+		x = -4
+		y = 1
+		relative_position_id = GER_PRUSSIAN_STATE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_PRUSSIAN_VALUES
+		icon = GFX_focus_industry
+		text = GER_PRUSSIAN_VALUES
+		prerequisite = { focus = GER_ARMY_WITH_STATE }
+		x = 0
+		y = 1
+		relative_position_id = GER_ARMY_WITH_STATE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_NAT_INTEGRALISM
+		icon = GFX_focus_industry
+		text = GER_NAT_INTEGRALISM
+		prerequisite = { focus = GER_PRUSSIAN_VALUES }
+		x = 0
+		y = 1
+		relative_position_id = GER_PRUSSIAN_VALUES
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_SPARTASKBUND
+		icon = GFX_focus_industry
+		text = GER_SPARTASKBUND
+		prerequisite = { focus = GER_PRUSSIAN_STATE }
+		x = -2
+		y = 1
+		relative_position_id = GER_PRUSSIAN_STATE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_SECOND_REVOLUTION
+		icon = GFX_focus_industry
+		text = GER_SECOND_REVOLUTION
+		prerequisite = { focus = GER_SPARTASKBUND }
+		x = 0
+		y = 1
+		relative_position_id = GER_SPARTASKBUND
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_END_REACTIONARIES
+
+		icon = GFX_focus_industry
+		text = GER_END_REACTIONARIES
+
+		prerequisite = { focus = GER_SECOND_REVOLUTION }
+		x = 0
+		y = 1
+		relative_position_id = GER_SECOND_REVOLUTION
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_RECALL_REICHSTAG
+		icon = GFX_focus_industry
+		text = GER_RECALL_REICHSTAG
+		prerequisite = { focus = GER_PRUSSIAN_STATE }
+		x = 0
+		y = 1
+		relative_position_id = GER_PRUSSIAN_STATE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_FREE_ELECTIONS
+		icon = GFX_focus_industry
+		text = GER_FREE_ELECTIONS
+		prerequisite = { focus = GER_RECALL_REICHSTAG }
+		x = 0
+		y = 1
+		relative_position_id = GER_RECALL_REICHSTAG
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = GER_NEW_DAWN
+		icon = GFX_focus_industry
+		text = GER_NEW_DAWN
+
+		prerequisite = { focus = GER_FREE_ELECTIONS }
+		x = 0
+		y = 1
+		relative_position_id = GER_FREE_ELECTIONS
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+		}
+
+		focus = {
+			id = GER_RETURN_OF_KAISER
+			icon = GFX_focus_industry
+			text = GER_RETURN_OF_KAISER
+			prerequisite = { focus = GER_PRUSSIAN_STATE }
+			x = 3
+			y = 1
+			relative_position_id = GER_PRUSSIAN_STATE
+			cost = 10
+			ai_will_do = {
+				factor = 20
+			}
+
+			available_if_capitulated = yes
+			search_filters = { FOCUS_FILTER_RESEARCH }
+
+			completion_reward = {
+
+			}
+		}
+		focus = {
+			id = GER_OLD_KAISER
+			icon = GFX_focus_industry
+			text = GER_OLD_KAISER
+			prerequisite = { focus = GER_RETURN_OF_KAISER }
+			x = -1
+			y = 1
+			relative_position_id = GER_RETURN_OF_KAISER
+			cost = 10
+			ai_will_do = {
+				factor = 20
+			}
+
+			available_if_capitulated = yes
+			search_filters = { FOCUS_FILTER_RESEARCH }
+
+			completion_reward = {
+
+			}
+		}
+		focus = {
+			id = GER_SUPPORT_MACKENSEN
+			icon = GFX_focus_industry
+			text = GER_SUPPORT_MACKENSEN
+			prerequisite = { focus = GER_RETURN_OF_KAISER }
+			x = 1
+			y = 1
+			relative_position_id = GER_RETURN_OF_KAISER
+			cost = 10
+			ai_will_do = {
+				factor = 20
+			}
+
+			available_if_capitulated = yes
+			search_filters = { FOCUS_FILTER_RESEARCH }
+
+			completion_reward = {
+
+			}
+		}
+		focus = {
+			id = GER_REVENGE
+			icon = GFX_focus_industry
+			text = GER_REVENGE
+			prerequisite = { focus = GER_OLD_KAISER focus = GER_SUPPORT_MACKENSEN }
+			x = -1
+			y = 1
+			relative_position_id = GER_SUPPORT_MACKENSEN
+			cost = 10
+			ai_will_do = {
+				factor = 20
+			}
+
+			available_if_capitulated = yes
+			search_filters = { FOCUS_FILTER_RESEARCH }
+
+			completion_reward = {
+
+			}
+	}
+
+
+	focus = {
+		id = GER_ABSOLUTE_POWER
+		icon = GFX_focus_industry
+		text = GER_ABSOLUTE_POWER
+		prerequisite = { focus = GER_NAT_INTEGRALISM focus = GER_END_REACTIONARIES }
+		x = 1
+		y = 1
+		relative_position_id = GER_NAT_INTEGRALISM
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+  }
+
+	focus = {
+		id = GER_RULE_OF_PEOPLE
+		icon = GFX_focus_industry
+		text = GER_RULE_OF_PEOPLE
+		prerequisite = { focus = GER_NEW_DAWN }
+		x = 0
+		y = 1
+		relative_position_id = GER_NEW_DAWN
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+  }
+
+	focus = {
+		id = GER_ANTIKA_REGIERUNG
+		icon = GFX_focus_industry
+		text = GER_ANTIKA_REGIERUNG
+		prerequisite = { focus = GER_REVENGE }
+		x = 0
+		y = 1
+		relative_position_id = GER_REVENGE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+
+		}
+  }
+
+
+
+
+
+	focus = {
+		id = GER_REUNIFICATION_OF_GERMANY
+		icon = GFX_focus_industry
+		text = GER_REUNIFICATION_OF_GERMANY
+		prerequisite = { focus = GER_RULE_OF_PEOPLE focus = GER_ANTIKA_REGIERUNG focus = GER_ABSOLUTE_POWER  }
+		x = 1
+		y = 2
+		relative_position_id = GER_NAT_INTEGRALISM
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_BLOOD_IRON
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_REUNIFICATION_OF_GERMANY }
+		mutually_exclusive = { focus = GER_FRANKFURT_PARLIAMENT focus = GER_REVOLUTION }
+		x = -2
+		y = 1
+		relative_position_id = GER_REUNIFICATION_OF_GERMANY
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  focus = {
+		id = GER_FRANKFURT_PARLIAMENT
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_REUNIFICATION_OF_GERMANY }
+		mutually_exclusive = { focus = GER_REVOLUTION focus = GER_BLOOD_IRON }
+		x = 2
+		y = 1
+		relative_position_id = GER_REUNIFICATION_OF_GERMANY
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_REVOLUTION
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_REUNIFICATION_OF_GERMANY }
+		mutually_exclusive = { focus = GER_FRANKFURT_PARLIAMENT focus = GER_BLOOD_IRON }
+		x = 6
+		y = 1
+		relative_position_id = GER_REUNIFICATION_OF_GERMANY
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_RHENISH_WAR
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_BLOOD_IRON }
+		x = -1
+		y = 1
+		relative_position_id = GER_BLOOD_IRON
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_ELSAß-LOTHRINGEN
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_RHENISH_WAR }
+		x = 0
+		y = 1
+		relative_position_id = GER_RHENISH_WAR
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_RK_FRANKREICH
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_ELSAß-LOTHRINGEN }
+		x = 0
+		y = 1
+		relative_position_id = GER_ELSAß-LOTHRINGEN
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_VENGENCE
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_BLOOD_IRON }
+		x = 1
+		y = 1
+		relative_position_id = GER_BLOOD_IRON
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_ANSCHLUSS
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_VENGENCE }
+		x = 0
+		y = 1
+		relative_position_id = GER_VENGENCE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_DNO
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_ANSCHLUSS }
+		x = 0
+		y = 1
+		relative_position_id = GER_ANSCHLUSS
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_DOMINANCE
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_DNO }
+		prerequisite = { focus = GER_RK_FRANKREICH }
+		x = -2
+		y = 1
+		relative_position_id = GER_DNO
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_FEDERALISM
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_FRANKFURT_PARLIAMENT }
+		mutually_exclusive = { focus = GER_FAILURE }
+		x = -1
+		y = 1
+		relative_position_id = GER_FRANKFURT_PARLIAMENT
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_FAILURE
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_FRANKFURT_PARLIAMENT }
+		mutually_exclusive = { focus = GER_FEDERALISM }
+		x = 1
+		y = 1
+		relative_position_id = GER_FRANKFURT_PARLIAMENT
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_UNITY_BALANCE
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_FEDERALISM }
+		x = 0
+		y = 1
+		relative_position_id = GER_FEDERALISM
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_GERMAN_UNITE
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_UNITY_BALANCE }
+		x = 0
+		y = 1
+		relative_position_id = GER_UNITY_BALANCE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_PRUSSIAN_NATIONALISM
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_FAILURE }
+		x = 0
+		y = 1
+		relative_position_id = GER_FAILURE
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_PARTITION
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_PRUSSIAN_NATIONALISM }
+		x = 0
+		y = 1
+		relative_position_id = GER_PRUSSIAN_NATIONALISM
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_PEACE
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_PARTITION focus = GER_GERMAN_UNITE }
+		x = -1
+		y = 1
+		relative_position_id = GER_PARTITION
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_RUHR
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_REVOLUTION }
+		x = -1
+		y = 1
+		relative_position_id = GER_REVOLUTION
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_LIBERATE_WEST
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_RUHR }
+		x = 0
+		y = 1
+		relative_position_id = GER_RUHR
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_TRAVAILLEUR
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_LIBERATE_WEST }
+		x = 0
+		y = 1
+		relative_position_id = GER_LIBERATE_WEST
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_BAYERN
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_REVOLUTION }
+		x = 1
+		y = 1
+		relative_position_id = GER_REVOLUTION
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_LIBERATE_SOUTH
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_BAYERN }
+		x = 0
+		y = 1
+		relative_position_id = GER_BAYERN
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_ROUSE_COUNCIL
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_LIBERATE_SOUTH }
+		x = 0
+		y = 1
+		relative_position_id = GER_LIBERATE_SOUTH
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
+  
+  focus = {
+		id = GER_CENTRE_REVOLUTION
+		icon = GFX_focus_industry
+		prerequisite = { focus = GER_ROUSE_COUNCIL }
+		prerequisite = { focus = GER_TRAVAILLEUR }
+		x = -1
+		y = 1
+		relative_position_id = GER_ROUSE_COUNCIL
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+
+		}
+  }
 }
