@@ -1,6 +1,7 @@
 
 add_namespace = papal
 
+PAP = { 
 country_event = {
 	id = papal.1
 	title = papal.1.t
@@ -31,7 +32,9 @@ country_event = {
 		complete_national_focus = PAP_RIOT
 		}
 		}
+		}
 		
+PAP = { 
 country_event = {
 	id = papal.2
 	title = papal.2.t
@@ -51,6 +54,7 @@ country_event = {
 		}
 		}
 		
+		PAP = { 
 		country_event = {
 		id = papal.3
 		title = papal.3.t
@@ -80,6 +84,7 @@ country_event = {
 		}
 		}
 		
+		PAP = {
 		country_event = {
 		id = papal.4
 		title = papal.4.t
@@ -108,6 +113,7 @@ country_event = {
 		}
 		}
 		
+		PAP = {
 		country_event = {
 		id = papal.5
 		title = papal.5.t
@@ -144,6 +150,7 @@ country_event = {
 		}
 		
 		#declined offer
+		PAP = {
 		country_event = {
 		id = papal.6
 		title = papal.6.t
@@ -160,6 +167,7 @@ country_event = {
 		}
 		}
 		
+		PAP = {
 		country_event = {
 		id = papal.7
 		title = papal.7.t
