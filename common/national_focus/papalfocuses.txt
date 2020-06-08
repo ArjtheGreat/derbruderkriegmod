@@ -393,6 +393,7 @@ focus_tree = {
 		}
 	}
 
+#nobody expects the spanish inquisition
 	focus = {
 		id = PAP_INQUISITION
 		icon = GFX_focus_industry
@@ -786,7 +787,6 @@ focus_tree = {
 		}
 		}
 		}
-	}
 
 	focus = {
 		id = PAP_IBERIA
